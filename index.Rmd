@@ -1,18 +1,16 @@
 ---
 title: "Peter Menzies"
-description: |
-  Welcome to the website!
+image: "Peter2.jpg"
+links:
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/peter-menzies-b80b28155/"
+  - label: GitHub
+    url: "https://github.com/petermenzies"
+  - label: Email
+    url: "mailto:peterfmenzies@gmail.com"
+output:
+  postcards::jolla
 site: distill::distill_website
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-
-# Learn more about creating websites with Distill at:
-# https://rstudio.github.io/distill/website.html
-
-# Learn more about publishing to GitHub Pages at:
-# https://rstudio.github.io/distill/publish_website.html#github-pages
-
-```
-
+ 
+This is my professional profile!
