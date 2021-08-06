@@ -1,0 +1,12 @@
+name: "petermenzies.github.io"
+title: "My Website"
+description: |
+  My Website
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Monkey"
+      href: index.html
+    - text: "Panda"
+      href: about.html
+output: distill::distill_article
