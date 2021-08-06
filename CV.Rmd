@@ -5,6 +5,12 @@ description: "A little about my education and experience"
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
 ```
 
-#### Master of Environmental Data Science at the Bren School
+```{r}
+ggplot(data = diamonds, aes(x = carat, y = price)) +
+  geom_point(aes(color = price))
+```
+
