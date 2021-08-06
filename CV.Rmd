@@ -1,0 +1,10 @@
+---
+title: "CV"
+description: "A little about my education and experience"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### Master of Environmental Data Science at the Bren School

@@ -6,7 +6,15 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-08-06T10:50:22-07:00"
+      "last_modified": "2021-08-06T11:03:23-07:00"
+    },
+    {
+      "path": "CV.html",
+      "title": "CV",
+      "description": "A little about my education and experience",
+      "author": [],
+      "contents": "\nMaster of Environmental Data Science at the Bren School\n\n\n\n",
+      "last_modified": "2021-08-06T11:03:24-07:00"
     },
     {
       "path": "index.html",
@@ -14,7 +22,7 @@
       "description": "Welcome to the website!\n",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-08-06T10:50:22-07:00"
+      "last_modified": "2021-08-06T11:03:24-07:00"
     }
   ],
   "collections": []
