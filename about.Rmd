@@ -1,7 +1,9 @@
 ---
 title: "About this site"
 description: |
-  Some additional details about the website
+  Welcome to my site, and thanks for checking it out. The content here represents the culmination of my professional
+  career and related personal projects thus far. I update it regularly with my current endeavors. Enjoy!
+  
 ---
 
 ```{r setup, include=FALSE}

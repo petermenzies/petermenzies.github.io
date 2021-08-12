@@ -1,6 +1,6 @@
 ---
 title: "Peter Menzies"
-image: "Peter2.jpg"
+image: "headshot.jpg"
 links:
   - label: LinkedIn
     url: "https://www.linkedin.com/in/peter-menzies-b80b28155/"

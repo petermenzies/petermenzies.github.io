@@ -1,0 +1,53 @@
+[
+  {
+    "path": "posts/2021-08-10-a-function-i-learned/",
+    "title": "A Function I Learned",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Peter Menzies",
+        "url": {}
+      }
+    ],
+    "date": "2021-08-10",
+    "categories": [],
+    "contents": "\n\n\n\n\n\n\n",
+    "preview": "posts/2021-08-10-a-function-i-learned/a-function-i-learned_files/figure-html5/unnamed-chunk-1-1.png",
+    "last_modified": "2021-08-10T11:12:30-07:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2021-08-10-cleaning-data-names/",
+    "title": "Cleaning Data Names",
+    "description": "Simple function to clean data names.",
+    "author": [
+      {
+        "name": "Peter Menzies",
+        "url": {}
+      }
+    ],
+    "date": "2021-08-10",
+    "categories": [],
+    "contents": "\nCleaning data names with the clean_names function in the janitor package\nYou can clean up and homogenize column titles by using the clean_names function\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-08-10T20:42:22-07:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2021-08-10-hello/",
+    "title": "My First Blog Post",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Peter Menzies",
+        "url": {}
+      }
+    ],
+    "date": "2021-08-10",
+    "categories": [],
+    "contents": "\nDistill is a publication format for scientific and technical writing, native to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-08-10T10:23:48-07:00",
+    "input_file": {}
+  }
+]

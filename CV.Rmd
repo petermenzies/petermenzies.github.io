@@ -1,6 +1,6 @@
 ---
 title: "CV"
-description: "A little about my education and experience"
+description: "My education and experience"
 ---
 
 ```{r setup, include=FALSE}
@@ -10,7 +10,6 @@ library(tidyverse)
 ```
 
 ```{r}
-ggplot(data = diamonds, aes(x = carat, y = price)) +
-  geom_point(aes(color = price))
+
 ```
 
