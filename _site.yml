@@ -7,8 +7,8 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "About"
-      href: about.html
+    - text: "Bio"
+      href: bio.html
     - text: "CV"
       href: CV.html
     - text: "Blog Roll"

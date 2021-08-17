@@ -13,6 +13,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&family=ZCOOL+KuaiLe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
 
 
 html {
@@ -29,10 +30,10 @@ html {
   --aside-color:     rgba(0, 0, 0, 0.6);
   --fig-cap-color:   rgba(0, 0, 0, 0.6);
   /*-- Specify custom fonts ~~~ must be imported above   --*/
-  --heading-font:    ZCOOL KuaiLe;
+  --heading-font:    Atkinson Hyperlegible;
   --mono-font:       monospace;
   --body-font:       sans-serif;
-  --navbar-font:     ZCOOL KuaiLe;  /* websites + blogs only */
+  --navbar-font:     Atkinson Hyperlegible;  /* websites + blogs only */
 }
 
 /*-- ARTICLE METADATA --*/
