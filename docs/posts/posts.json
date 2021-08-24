@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-08-23-christmas-gift-exchange/",
+    "title": "Random Secret Santa R Script",
+    "description": "A script I created to automate my family's yearly secret santa",
+    "author": [
+      {
+        "name": "Peter Menzies",
+        "url": {}
+      }
+    ],
+    "date": "2021-08-23",
+    "categories": [],
+    "contents": "\nMy family’s yearly gift exchange\nHere’s a little context needed to understand the program I created, before we get to the actual code.\nEach year my extended family (around 30 people, depending on the year) does a secret santa gift exchange where each member of the family is randomly paired with another — the one parameter being that each person must be matched with someone outside of their nuclear family unit. The matches are assigned using the good old “pick a name from the hat” method. If you draw a name from within your immediate family, you try again until you get someone who isn’t. This process seemed like an excellent candidate for automation, and with a couple weeks of R under my belt, it felt like a perfect task to apply what I had learned so far.\n\n\n\n\n",
+    "preview": {},
+    "last_modified": "2021-08-23T20:14:17-07:00",
+    "input_file": "christmas-gift-exchange.knit.md"
+  },
+  {
     "path": "posts/2021-08-10-a-function-i-learned/",
     "title": "User input as function arguments in R",
     "description": "A brief rundown of using readline() to prompt a user's input for use as function arguments",

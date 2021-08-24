@@ -1,0 +1,55 @@
+---
+title: "Random Secret Santa R Script"
+description: |
+  A script I created to automate my family's yearly secret santa gift exchange
+author:
+  - name: Peter Menzies
+    url: {}
+date: 08-23-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+### My family's yearly gift exchange
+
+Here's a little context needed to understand the program I created, before we get to the actual code. 
+
+Each year my extended family does a secret santa gift exchange where each member of the family is randomly paired with another — the one parameter being that each person must be matched with someone outside of their nuclear family. The matches are assigned using the good old "pick a name from the hat" method. If you draw a name from within your immediate family, you try again until you get someone who isn't. This process seemed like an excellent candidate for automation, and with a couple weeks of R under my belt, it felt like a perfect task to apply what I had learned so far.
+
+### Packages used: `tidyverse` and `here`
+
+```{r}
+library(tidyverse)
+library(here)
+```
+
+
+### Creating data frame with family member's and their corresponding family unit
+
+I read in a CSV that contains two variables we care about: `Person` and `Group`. Each family member is listed in the `Person` column, and the label created for their family unit under `Group`. 
+
+```{r}
+xmas_names <- read_csv(here::here("data", "xmas_names.csv")) %>% 
+  select(Person, Group) 
+```
+
+### Creating the function
+
+I want to create a self-contained function that can be run repeatedly, without affecting the original `xmas_names` data frame. Let's start by creating the temporary data frames and vectors we'll need during the matching iteration process.
+
+```{r}
+dim_names <- xmas_names
+matches <- vector(mode = "character", length = 13)
+already_matched <- vector(mode = "character")
+```
+
+- `dim_names` will be our list of *diminishing* names that we will iterate through and will remove names from that have already been matched. 
+
+- `matches` is our empty vector that will be populated with strings containing 
+
