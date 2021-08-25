@@ -43,7 +43,7 @@ xmas_names <- read_csv(here::here("data", "xmas_names.csv")) %>%
 
 I want to create a function that outputs a data frame with two columns `Giver` and `Recipient`, that lists each member of my family and who they will be giving a gift to. 
 
-Let's start by preemptively creating this object, `ouput_df` before we get into the for loop. I've made a data frame of the proper dimensions, and also a vector that we'll later populate with the names of those that have already been matched.
+Let's start by preemptively creating this object, `ouput_df`, before we get into the for loop. I've made a data frame of the proper dimensions, and also a vector that we'll later populate with the names of those that have already been matched.
 
 ```{r}
 output_df <- data.frame(Giver = seq(1:nrow(xmas_names)), Recipient = seq(1:nrow(xmas_names)))
