@@ -13,7 +13,7 @@ output:
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ### My family's yearly gift exchange
@@ -41,15 +41,35 @@ xmas_names <- read_csv(here::here("data", "xmas_names.csv")) %>%
 
 ### Creating the function
 
-I want to create a self-contained function that can be run repeatedly, without affecting the original `xmas_names` data frame. Let's start by creating the temporary data frames and vectors we'll need during the matching iteration process.
+I want to create a function that outputs a data frame with two columns `Giver` and `Recipient`, that lists each member of my family and who they will be giving a gift to. 
+
+Let's start by preemptively creating this object before we get into the for loop. I've made a data frame of the proper dimensions, and also a vector that we'll later populate with the names of those that have already been matched.
 
 ```{r}
-dim_names <- xmas_names
-matches <- vector(mode = "character", length = 13)
+output_df <- data.frame(Giver = seq(1:nrow(xmas_names)), Recipient = seq(1:nrow(xmas_names)))
 already_matched <- vector(mode = "character")
 ```
 
-- `dim_names` will be our list of *diminishing* names that we will iterate through and will remove names from that have already been matched. 
+### For loop
 
-- `matches` is our empty vector that will be populated with strings containing 
+Within our function we'll have a for loop that iterates through each row in our `xmas_names` data frame and randomly pairs the `Person` in each row with another person from outside of their immediate family unit. 
+
+We'll iterate along the sequence `1:nrow(xmas_names)` 
+
+In order to adjust our pool of "allowable" matches each iteration we're going to create a temporary data frame, `temp_names`, that is first bound to xmas_names and then filtered based on our two criteria: the person cannot be in the same `Group` (family unit) and cannot have already been matched with someone else already. We'll use `dplyr::filter()` to subset `temp_names` to meet these parameters.
+
+Next, before the loop goes any further we'll need to add an `if` statement that saves our function from hitting a dead end. Depending on the order in which matches are randomly assigned, sometimes only members of a single family unit remain in the final iterations. When this happens, our `temp_names` will be empty because there are no longer any viable matches, and our code will break. The `if` statement will just return our function when `TRUE`, so the function will continue to be called until we get a sequence of matches that works!
+
+Next we're going to generate a random number using the `sample()` function and assign it to `sample_number`. This number will be used to index our random match. The number has to be in the range `1:nrow(temp_names)` because `temp_names` is our temporary data frame of viable match candidates. 
+
+We'll use `sample_number` to index `temp_names$Person` and assign that value to `xmas_match`. For consistency, we'll assign the person currently being matched to `matchee`.
+
+Now we need to `append()` our current `xmas_match` to our vector `already_matched` which is used to filter `temp_names` so that person can't be matched with anyone else.
+
+
+
+```{r}
+
+```
+
 

@@ -2,7 +2,7 @@
   {
     "path": "posts/2021-08-23-christmas-gift-exchange/",
     "title": "Random Secret Santa R Script",
-    "description": "A script I created to automate my family's yearly secret santa",
+    "description": "A script I created to automate my family's yearly secret santa gift exchange",
     "author": [
       {
         "name": "Peter Menzies",
@@ -11,10 +11,10 @@
     ],
     "date": "2021-08-23",
     "categories": [],
-    "contents": "\nMy family’s yearly gift exchange\nHere’s a little context needed to understand the program I created, before we get to the actual code.\nEach year my extended family (around 30 people, depending on the year) does a secret santa gift exchange where each member of the family is randomly paired with another — the one parameter being that each person must be matched with someone outside of their nuclear family unit. The matches are assigned using the good old “pick a name from the hat” method. If you draw a name from within your immediate family, you try again until you get someone who isn’t. This process seemed like an excellent candidate for automation, and with a couple weeks of R under my belt, it felt like a perfect task to apply what I had learned so far.\n\n\n\n\n",
+    "contents": "\nMy family’s yearly gift exchange\nHere’s a little context needed to understand the program I created, before we get to the actual code.\nEach year my extended family does a secret santa gift exchange where each member of the family is randomly paired with another — the one parameter being that each person must be matched with someone outside of their nuclear family. The matches are assigned using the good old “pick a name from the hat” method. If you draw a name from within your immediate family, you try again until you get someone who isn’t. This process seemed like an excellent candidate for automation, and with a couple weeks of R under my belt, it felt like a perfect task to apply what I had learned so far.\nPackages used: tidyverse and here\n\n\nlibrary(tidyverse)\nlibrary(here)\n\n\n\nCreating data frame with family member’s and their corresponding family unit\nI read in a CSV that contains two variables we care about: Person and Group. Each family member is listed in the Person column, and the label created for their family unit under Group.\n\n\nxmas_names <- read_csv(here::here(\"data\", \"xmas_names.csv\")) %>% \n  select(Person, Group) \n\n\n\nCreating the function\nI want to create a function that outputs a data frame with two columns Giver and Recipient, that lists each member of my family and who they will be giving a gift to.\nLet’s start by preemptively creating this object before we get into the for loop. I’ve made a data frame of the proper dimensions, and also a vector that we’ll later populate with the names of those that have already been matched.\n\n\noutput_df <- data.frame(Giver = seq(1:nrow(xmas_names)), Recipient = seq(1:nrow(xmas_names)))\nalready_matched <- vector(mode = \"character\")\n\n\n\nFor loop\nWithin our function we’ll have a for loop that iterates through each row in our xmas_names data frame and randomly pairs the Person in each row with another person from outside of their immediate family unit.\nWe’ll iterate along the sequence 1:nrow(xmas_names)\nIn order to adjust our pool of “allowable” matches each iteration we’re going to create a temporary data frame, temp_names, that is first bound to xmas_names and then filtered based on our two criteria: the person cannot be in the same Group (family unit) and cannot have already been matched with someone else already. We’ll use dplyr::filter() to subset temp_names to meet these parameters.\n\n`temp_names <- xmas_names %>%`\n `filter(Group != xmas_names$Group[i]) %>%`\n `filter(!Person %in% already_matched)`\n\nNext, before the loop goes any further we’ll need to add an if statement that saves our function from hitting a dead end. Depending on the order in which matches are randomly assigned, sometimes only members of a single family unit remain in the final iterations. When this happens, our temp_names will be empty because there are no longer any viable matches, and our code will break.\n\n\n\n\n\n\n",
     "preview": {},
-    "last_modified": "2021-08-23T20:14:17-07:00",
-    "input_file": {}
+    "last_modified": "2021-08-24T23:16:14-07:00",
+    "input_file": "christmas-gift-exchange.knit.md"
   },
   {
     "path": "posts/2021-08-10-a-function-i-learned/",
