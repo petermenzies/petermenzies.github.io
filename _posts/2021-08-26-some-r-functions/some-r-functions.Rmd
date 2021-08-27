@@ -1,7 +1,7 @@
 ---
 title: "Some R functions"
 description: |
-  A short description of the post.
+  Random stuff for Alec to check out
 author:
   - name: Peter Menzies
     url: {}
