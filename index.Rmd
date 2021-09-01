@@ -12,5 +12,4 @@ output:
   postcards::jolla
 site: distill::distill_website
 ---
- 
-This is my professional profile!
+

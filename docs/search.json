@@ -6,21 +6,21 @@
       "description": "Welcome to my site, and thanks for checking it out. The content here represents the culmination of my professional\ncareer and related personal projects thus far. I update it regularly with my current endeavors. Enjoy!\n",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-08-31T19:41:10-07:00"
+      "last_modified": "2021-08-31T19:44:29-07:00"
     },
     {
       "path": "bio.html",
       "title": "Bio",
       "author": [],
       "contents": "\nI’m currently pursuing a masters degree in Environmental Data Science at UC Santa Barbara’s Bren School of Environmental Science and Management. I spent my undergraduate career studying ecology at the University of North Carolina at Asheville. I entered the realm of environmental research as a technician with the US Forest Service, conducting field work for several studies concerning eastern hemlock decline. Following this path, I pursued my own undergraduate research looking at the habitat preferences of two orchid species in Western North Carolina, and spent another field season collecting and analyzing data for a forest gap and regeneration study with NC State University. Wanting to try my hand at education and to get more involved in my community, I spent nearly three years as the Environmental Educator for a small nonprofit in Asheville. During this time I started teaching myself to code and was drawn to the idea of applying data science techniques to combat environmental issues. I hope to use the environmental data science degree I’m working towards to assess the use of emerging technologies in the fight against climate change.\n\n\n\n",
-      "last_modified": "2021-08-31T19:41:11-07:00"
+      "last_modified": "2021-08-31T19:44:30-07:00"
     },
     {
       "path": "blog.html",
       "title": "Blog Roll",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-08-31T19:41:11-07:00"
+      "last_modified": "2021-08-31T19:44:30-07:00"
     },
     {
       "path": "CV.html",
@@ -28,14 +28,14 @@
       "description": "My education and experience",
       "author": [],
       "contents": "\n\n\n\n\n\n\n",
-      "last_modified": "2021-08-31T19:41:13-07:00"
+      "last_modified": "2021-08-31T19:44:32-07:00"
     },
     {
       "path": "index.html",
       "title": "Peter Menzies",
       "author": [],
-      "contents": "\n\n          \n          \n          Peter Menzies\n          Home\n          Bio\n          CV\n          Blog\n          \n          \n          ☰\n          \n          \n      \n        \n          \n            Peter Menzies\n          \n          \n            \n              This is my professional profile!\n            \n            \n              This is my professional profile!\n            \n          \n\n          \n            \n              \n                  \n                    \n                      \n                    \n                  \n                \n                                \n                  \n                    \n                      \n                    \n                  \n                \n                                \n                  \n                    \n                      \n                    \n                  \n                \n                              \n          \n\n          \n            \n              \n                                \n                  \n                    \n                  \n                \n                                \n                  \n                    \n                  \n                \n                                \n                  \n                    \n                  \n                \n                              \n            \n          \n        \n      \n    \n\n    \n    \n    ",
-      "last_modified": "2021-08-31T19:41:13-07:00"
+      "contents": "\n\n          \n          \n          Peter Menzies\n          Home\n          Bio\n          CV\n          Blog\n          \n          \n          ☰\n          \n          \n      \n        \n          \n            Peter Menzies\n          \n          \n            \n              \n            \n            \n              \n            \n          \n\n          \n            \n              \n                  \n                    \n                      \n                    \n                  \n                \n                                \n                  \n                    \n                      \n                    \n                  \n                \n                                \n                  \n                    \n                      \n                    \n                  \n                \n                              \n          \n\n          \n            \n              \n                                \n                  \n                    \n                  \n                \n                                \n                  \n                    \n                  \n                \n                                \n                  \n                    \n                  \n                \n                              \n            \n          \n        \n      \n    \n\n    \n    \n    ",
+      "last_modified": "2021-08-31T19:44:32-07:00"
     }
   ],
   "collections": ["posts/posts.json"]
