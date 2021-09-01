@@ -2,12 +2,12 @@
 title: "Peter Menzies"
 image: "headshot.jpg"
 links:
-  - label: LinkedIn
-    url: "https://www.linkedin.com/in/peter-menzies-b80b28155/"
-  - label: GitHub
-    url: "https://github.com/petermenzies"
-  - label: Email
+  - label: '<i class="far fa-envelope fa-3x"></i>'
     url: "mailto:peterfmenzies@gmail.com"
+  - label: '<i class="fab fa-linkedin-in fa-3x"></i>'
+    url: "https://www.linkedin.com/in/peter-menzies-b80b28155/"
+  - label: '<i class="fab fa-github fa-3x"></i>'
+    url: "https://github.com/petermenzies"
 output:
   postcards::jolla
 site: distill::distill_website

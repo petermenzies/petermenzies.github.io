@@ -62,11 +62,11 @@ d-appendix {
 /* These properties only apply to Distill sites and blogs  */
 
 .distill-site-header {
-  --title-size:       18px;
-  --text-color:       rgba(255, 255, 255, 0.8);
-  --text-size:        15px;
-  --hover-color:      white;
-  --bkgd-color:       #0F2E3D;
+  --title-size:       22px;
+  --text-color:       rgba(255, 255, 255, 255);
+  --text-size:        17px;
+  --hover-color:      #6ff1f1;
+  --bkgd-color:       #4d5555;
 }
 
 .distill-site-footer {
@@ -78,4 +78,15 @@ d-appendix {
 
 /*-- Additional custom styles --*/
 /* Add any additional CSS rules below                      */
+
+/*-- Navbar styling */
+
+
+.distill-site-nav {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 12px 6px -6px #999;
+
+    /* the rest of your styling */
+}
 

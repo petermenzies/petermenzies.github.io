@@ -736,7 +736,6 @@
             --body-color:      rgba(0, 0, 0, 0.8);
             --aside-color:     rgba(0, 0, 0, 0.6);
             --fig-cap-color:   rgba(0, 0, 0, 0.6);
-            --navbar-color:    rgba(255, 0, 0, 0.6);
             /*-- Specify custom fonts ~~~ must be imported above   --*/
             --heading-font:    Atkinson Hyperlegible;
             --mono-font:       monospace;
@@ -770,11 +769,11 @@
           /* These properties only apply to Distill sites and blogs  */
 
           .distill-site-header {
-            --title-size:       18px;
-            --text-color:       rgba(255, 255, 255, 0.8);
-            --text-size:        15px;
-            --hover-color:      white;
-            --bkgd-color:       #0F2E3D;
+            --title-size:       22px;
+            --text-color:       rgba(255, 255, 255, 255);
+            --text-size:        17px;
+            --hover-color:      #6ff1f1;
+            --bkgd-color:       #4d5555;
           }
 
           .distill-site-footer {
@@ -786,6 +785,17 @@
 
           /*-- Additional custom styles --*/
           /* Add any additional CSS rules below                      */
+
+          /*-- Navbar styling */
+
+
+          .distill-site-nav {
+              -webkit-box-shadow: 0 8px 6px -6px #999;
+              -moz-box-shadow: 0 8px 6px -6px #999;
+              box-shadow: 0 12px 6px -6px #999;
+
+              /* the rest of your styling */
+          }
           </style>
           <style type="text/css">
           /* base style */
@@ -951,11 +961,11 @@
           <header class="header header--fixed" role="banner">
           <nav class="distill-site-nav distill-site-header">
           <div class="nav-left">
-          <a href="index.html" class="title">My Website</a>
+          <a href="index.html" class="title">Peter Menzies</a>
           <a href="index.html">Home</a>
           <a href="bio.html">Bio</a>
           <a href="CV.html">CV</a>
-          <a href="blog.html">Blog Roll</a>
+          <a href="blog.html">Blog</a>
           <input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
           </div>
           <div class="nav-right">
@@ -989,23 +999,23 @@
             <div class="col-8 text-center d-none d-sm-block">
               <ul class="list-inline">
                                 <li class="list-inline-item">
+                  <a href=mailto:peterfmenzies@gmail.com>
+                    <button type="button" class="btn btn-outline-dark mb-2">
+                      <i class="far fa-envelope fa-3x"></i>
+                    </button>
+                  </a>
+                </li>
+                                <li class="list-inline-item">
                   <a href=https://www.linkedin.com/in/peter-menzies-b80b28155/>
                     <button type="button" class="btn btn-outline-dark mb-2">
-                      LinkedIn
+                      <i class="fab fa-linkedin-in fa-3x"></i>
                     </button>
                   </a>
                 </li>
                                 <li class="list-inline-item">
                   <a href=https://github.com/petermenzies>
                     <button type="button" class="btn btn-outline-dark mb-2">
-                      GitHub
-                    </button>
-                  </a>
-                </li>
-                                <li class="list-inline-item">
-                  <a href=mailto:peterfmenzies@gmail.com>
-                    <button type="button" class="btn btn-outline-dark mb-2">
-                      Email
+                      <i class="fab fa-github fa-3x"></i>
                     </button>
                   </a>
                 </li>
@@ -1016,19 +1026,19 @@
           <div class="row justify-content-center align-items-center">
             <div class="col-8 m-1 text-center d-block d-sm-none">
               <div class="list-group">
+                                <a href=mailto:peterfmenzies@gmail.com>
+                  <button type="button" class="list-group-item list-group-item-action my-1 rounded">
+                    <i class="far fa-envelope fa-3x"></i>
+                  </button>
+                </a>
                                 <a href=https://www.linkedin.com/in/peter-menzies-b80b28155/>
                   <button type="button" class="list-group-item list-group-item-action my-1 rounded">
-                    LinkedIn
+                    <i class="fab fa-linkedin-in fa-3x"></i>
                   </button>
                 </a>
                                 <a href=https://github.com/petermenzies>
                   <button type="button" class="list-group-item list-group-item-action my-1 rounded">
-                    GitHub
-                  </button>
-                </a>
-                                <a href=mailto:peterfmenzies@gmail.com>
-                  <button type="button" class="list-group-item list-group-item-action my-1 rounded">
-                    Email
+                    <i class="fab fa-github fa-3x"></i>
                   </button>
                 </a>
                               </div>
