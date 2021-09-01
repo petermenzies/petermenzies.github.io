@@ -2127,10 +2127,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300&family=ZCOOL+KuaiLe&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
 
+  /*-- Assigning color variable --*/
+
+  :root {
+    --main-text-color: #eeeeee;
+    --secondary-text-color: #72faca;
+    --link-hover: #05a8c4;
+    --surface2: #393e46;
+    --main-link: #72faca;
+    --boarder: rgba(255, 255, 255, 0.31);
+  }
 
   html {
     /*-- Main font sizes --*/
-    --title-size:      50px;
+    --title-size:      60px;
     --body-size:       1.06rem;
     --code-size:       14px;
     --aside-size:      12px;
@@ -2177,8 +2187,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --title-size:       22px;
     --text-color:       rgba(255, 255, 255, 255);
     --text-size:        17px;
-    --hover-color:      #6ff1f1;
-    --bkgd-color:       #4d5555;
+    --hover-color:      var(--link-hover);
+    --bkgd-color:       #4b4e4e;
   }
 
   .distill-site-footer {
@@ -2201,7 +2211,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       /* the rest of your styling */
   }
-  </style>
+
+  .btn-outline-dark:hover {
+      /*color: var(--main-text-color);*/
+      background-color: var(--link-hover);
+      /*border-color: var(--main-link);*/
+      
+
+  img {
+    height: 15rem;
+  }</style>
   <style type="text/css">
   /* base style */
 
