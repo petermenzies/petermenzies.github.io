@@ -1,5 +1,5 @@
 ---
-title: "Emoji Names"
+title: "emo::ji() Emoji Names"
 description: |
   A searchable archive of emoji names pertaining to the emo::ji() function.
 date: "`r Sys.Date()`"
