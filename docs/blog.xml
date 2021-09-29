@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+  <channel>
+    <title>Peter Menzies</title>
+    <link>https://petermenzies.github.io/</link>
+    <atom:link href="https://petermenzies.github.io/blog.xml" rel="self" type="application/rss+xml"/>
+    <description>My Website
+</description>
+    <generator>Distill</generator>
+    <lastBuildDate>Mon, 23 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Secret Santa R Script</title>
+      <dc:creator>Peter Menzies</dc:creator>
+      <link>https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange</link>
+      <description>A script I created to automate my family's yearly secret santa gift exchange</description>
+      <category>R</category>
+      <guid>https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange</guid>
+      <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>User input as function arguments in R</title>
+      <dc:creator>Peter Menzies</dc:creator>
+      <link>https://petermenzies.github.io/posts/2021-08-10-user-input-within-functions</link>
+      <description>A brief rundown of using readline() to prompt a user's input for use as function arguments</description>
+      <category>R</category>
+      <category>Function I Learned</category>
+      <guid>https://petermenzies.github.io/posts/2021-08-10-user-input-within-functions</guid>
+      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

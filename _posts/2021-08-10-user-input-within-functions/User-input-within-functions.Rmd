@@ -9,6 +9,9 @@ date: 08-22-2021
 output:
   distill::distill_article:
     self_contained: false
+categories:
+  - R
+  - "Function I Learned"
 ---
 
 

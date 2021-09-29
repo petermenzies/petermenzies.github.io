@@ -86,10 +86,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-<title>Peter Menzies: Random Secret Santa R Script</title>
+<title>Peter Menzies: Secret Santa R Script</title>
 
 <meta property="description" itemprop="description" content="A script I created to automate my family&#39;s yearly secret santa gift exchange"/>
 
+<link rel="canonical" href="https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/"/>
 
 <!--  https://schema.org/Article -->
 <meta property="article:published" itemprop="datePublished" content="2021-08-23"/>
@@ -97,22 +98,30 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta name="article:author" content="Peter Menzies"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="Peter Menzies: Random Secret Santa R Script"/>
+<meta property="og:title" content="Peter Menzies: Secret Santa R Script"/>
 <meta property="og:type" content="article"/>
 <meta property="og:description" content="A script I created to automate my family&#39;s yearly secret santa gift exchange"/>
+<meta property="og:url" content="https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/"/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:site_name" content="Peter Menzies"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary"/>
-<meta property="twitter:title" content="Peter Menzies: Random Secret Santa R Script"/>
+<meta property="twitter:title" content="Peter Menzies: Secret Santa R Script"/>
 <meta property="twitter:description" content="A script I created to automate my family&#39;s yearly secret santa gift exchange"/>
+<meta property="twitter:url" content="https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/"/>
 
+<!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
+<meta name="citation_title" content="Peter Menzies: Secret Santa R Script"/>
+<meta name="citation_fulltext_html_url" content="https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/"/>
+<meta name="citation_online_date" content="2021/08/23"/>
+<meta name="citation_publication_date" content="2021/08/23"/>
+<meta name="citation_author" content="Peter Menzies"/>
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Random Secret Santa R Script"]},{"type":"character","attributes":{},"value":["A script I created to automate my family's yearly secret santa gift exchange"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Peter Menzies"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["08-23-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","slug","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Secret Santa R Script"]},{"type":"character","attributes":{},"value":["A script I created to automate my family's yearly secret santa gift exchange"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Peter Menzies"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["08-23-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["R"]},{"type":"character","attributes":{},"value":["2021-23-08-secret-santa-r-script"]},{"type":"character","attributes":{},"value":["https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/"]},{"type":"character","attributes":{},"value":["https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2405,7 +2414,7 @@ d-appendix d-footnote-list a.footnote-backlink {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Random Secret Santa R Script","description":"A script I created to automate my family's yearly secret santa gift exchange","authors":[{"author":"Peter Menzies","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-08-23T00:00:00.000+00:00","citationText":"Menzies, 2021"}
+{"title":"Secret Santa R Script","description":"A script I created to automate my family's yearly secret santa gift exchange","authors":[{"author":"Peter Menzies","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-08-23T00:00:00.000+00:00","citationText":"Menzies, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2421,6 +2430,9 @@ d-appendix d-footnote-list a.footnote-backlink {
 <input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
 </div>
 <div class="nav-right">
+<a href="https://github.com/petermenzies/petermenzies.github.io" aria-label="Link to source">
+<i class="fab fa-github" aria-hidden="true"></i>
+</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2430,8 +2442,11 @@ d-appendix d-footnote-list a.footnote-backlink {
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Random Secret Santa R Script</h1>
+<h1>Secret Santa R Script</h1>
 <!--radix_placeholder_categories-->
+<div class="dt-tags">
+  <a href="../../blog.html#category:R" class="dt-tag">R</a>
+</div>
 <!--/radix_placeholder_categories-->
 <p><p>A script I created to automate my family’s yearly secret santa gift exchange</p></p>
 </div>
@@ -2445,7 +2460,7 @@ d-appendix d-footnote-list a.footnote-backlink {
 <div class="d-article">
 <h3 id="my-familys-yearly-gift-exchange">My family’s yearly gift exchange</h3>
 <p>Here’s a little context needed to understand the program I created, before we get to the actual code.</p>
-<p>Each year my extended family does a secret santa gift exchange where each member of the family is randomly paired with another — the one parameter being that each person must be matched with someone outside of their nuclear family. The matches are assigned using the good old “pick a name from the hat” method. If you draw a name from within your immediate family, you try again until you get someone who isn’t. This process seemed like an excellent candidate for automation, and with a couple weeks of R under my belt, it felt like a perfect task to apply what I had learned so far.</p>
+<p>Each year my extended family does a secret santa gift exchange where each member of the family is randomly paired with another — the one caveat being that each person must be matched with someone outside of their nuclear family. Traditionally, the matches are assigned using the good old “pick a name from the hat” method. If you draw a name from within your immediate family, you try again until you get someone who isn’t. This process seemed like an excellent candidate for automation, and with a couple weeks of R under my belt, it felt like a perfect task to apply what I had learned so far.</p>
 <h3 id="packages-used-tidyverse-and-here">Packages used: <code>tidyverse</code> and <code>here</code></h3>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -2465,7 +2480,7 @@ d-appendix d-footnote-list a.footnote-backlink {
 </div>
 <h3 id="creating-the-function">Creating the function</h3>
 <p>I want to create a function that outputs a data frame with two columns <code>Giver</code> and <code>Recipient</code>, that lists each member of my family and who they will be giving a gift to.</p>
-<p>Let’s start by preemptively creating this object before we get into the for loop. I’ve made a data frame of the proper dimensions, and also a vector that we’ll later populate with the names of those that have already been matched.</p>
+<p>Let’s start by preemptively creating this object, <code>ouput_df</code>, before we get into the for loop. I’ve made a data frame of the proper dimensions, and also a vector that we’ll later populate with the names of those that have already been matched.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='va'>output_df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>Giver <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>xmas_names</span><span class='op'>)</span><span class='op'>)</span>, Recipient <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>xmas_names</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
@@ -2477,16 +2492,14 @@ d-appendix d-footnote-list a.footnote-backlink {
 <p>Within our function we’ll have a for loop that iterates through each row in our <code>xmas_names</code> data frame and randomly pairs the <code>Person</code> in each row with another person from outside of their immediate family unit.</p>
 <p>We’ll iterate along the sequence <code>1:nrow(xmas_names)</code></p>
 <p>In order to adjust our pool of “allowable” matches each iteration we’re going to create a temporary data frame, <code>temp_names</code>, that is first bound to xmas_names and then filtered based on our two criteria: the person cannot be in the same <code>Group</code> (family unit) and cannot have already been matched with someone else already. We’ll use <code>dplyr::filter()</code> to subset <code>temp_names</code> to meet these parameters.</p>
-<blockquote>
-<pre><code>`temp_names &lt;- xmas_names %&gt;%`
- `filter(Group != xmas_names$Group[i]) %&gt;%`
- `filter(!Person %in% already_matched)`</code></pre>
-</blockquote>
-<p>Next, before the loop goes any further we’ll need to add an <code>if</code> statement that saves our function from hitting a dead end. Depending on the order in which matches are randomly assigned, sometimes only members of a single family unit remain in the final iterations. When this happens, our <code>temp_names</code> will be empty because there are no longer any viable matches, and our code will break.</p>
+<p>Next, before the loop goes any further we’ll need to add an <code>if</code> statement that saves our function from hitting a dead end. Depending on the order in which matches are randomly assigned, sometimes only members of a single family unit remain in the final iterations. When this happens, our <code>temp_names</code> will be empty because there are no longer any viable matches, and our code will break. The <code>if</code> statement will just return our function when <code>TRUE</code>, so the function will continue to be called until we get a sequence of matches that works!</p>
+<p>Next we’re going to generate a random number using the <code>sample()</code> function and assign it to <code>sample_number</code>. This number will be used to index our random match. The number has to be in the range <code>1:nrow(temp_names)</code> because <code>temp_names</code> is our temporary data frame of viable match candidates.</p>
+<p>We’ll use <code>sample_number</code> to index <code>temp_names$Person</code> and assign that value to <code>xmas_match</code>. For consistency, we’ll assign the person currently being matched to <code>matchee</code>.</p>
+<p>Now we need to <code>append()</code> our current <code>xmas_match</code> to our vector <code>already_matched</code> which is used to filter <code>temp_names</code> so that person can’t be matched with anyone else.</p>
 <div class="layout-chunk" data-layout="l-body">
 
 </div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -2498,7 +2511,18 @@ d-appendix d-footnote-list a.footnote-backlink {
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+  <h3 id="citation">Citation</h3>
+  <p>For attribution, please cite this work as</p>
+  <pre class="citation-appendix short">Menzies (2021, Aug. 23). Peter Menzies: Secret Santa R Script. Retrieved from https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/</pre>
+  <p>BibTeX citation</p>
+  <pre class="citation-appendix long">@misc{2021-23-08-secret-santa-r-script,
+  author = {Menzies, Peter},
+  title = {Peter Menzies: Secret Santa R Script},
+  url = {https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/},
+  year = {2021}
+}</pre>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->
