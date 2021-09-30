@@ -55,7 +55,7 @@ already_matched <- vector(mode = "character")
 
 ### For loop
 
-Within our function we'll have a for loop that iterates through each row in our `xmas_names` data frame and randomly pairs the `Person` in each row with another person from outside of their immediate family unit. 
+Within our function we'll have a for loop that iterates through each row in our `xmas_names` data frame and randomly pairs the `Person` in each row with another person from outside of their immediate family unit (`group`). 
 
 We'll iterate along the sequence `1:nrow(xmas_names)` 
 
