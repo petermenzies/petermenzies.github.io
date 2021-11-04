@@ -1,6 +1,6 @@
 ---
 title: "Peter Menzies"
-image: "headshot.jpg"
+image: "Peter_headshot.jpeg"
 links:
   - label: '<i class="far fa-envelope fa-3x"></i>'
     url: "mailto:peterfmenzies@gmail.com"
