@@ -30,7 +30,7 @@ library(kableExtra)
 
 ## Background
 
-Pollinator decline is among the world's most pressing environmental issues. The creatures that fill this niche are necessary for the reproduction of roughly 85% of flowering plant species, and about three-fourths of the world's staple crop species rely on them (US Forest Service). The services that pollinators provide in the US agricultural system were valued at \$34 in 2012 (Jordan et al. 2021). That staggering figure doesn't even include the value of the many ecosystems that hinge on their presence. Unfortunately, pollinator populations are declining world wide at alarming rates (Potts et al. 2010). Honeybees have become the poster child of this issue---and while the attention is well-deserved, the US is home to around 4000 native bee species, many of which are also facing population declines and are also highly important pollinators (US Forest Service). 49 of these species are members of the genus _Bombus_, commonly known as bumblebees. In addition to their general efficacy as pollen carriers, bumblebees are the sole pollinators of certain plants they have coevolved with. Flowers of plants like blueberries, tomatoes, pumpkins, and many others require what's known as buzz pollination, or sonication---this means they need a bee to vibrate at a particular frequency to release their pollen (Vallejo-Marín 2019). _Bombus_ species perform this form of pollination, making them invaluable to our native ecosystems and many important food crops.
+Pollinator decline is among the world's most pressing environmental issues. The creatures that fill this niche are necessary for the reproduction of roughly 85% of flowering plant species, and about three-fourths of the world's staple crop species rely on them (US Forest Service). The services that pollinators provide in the US agricultural system were valued at \$34 billion in 2012 (Jordan et al. 2021). That staggering figure doesn't even include the value of the many ecosystems that hinge on their presence. Unfortunately, pollinator populations are declining world wide at alarming rates (Potts et al. 2010). Honeybees have become the poster child of this issue---and while the attention is well-deserved, the US is home to around 4000 native bee species, many of which are also facing population declines and are also highly important pollinators (US Forest Service). 49 of these species are members of the genus _Bombus_, commonly known as bumblebees. In addition to their general efficacy as pollen carriers, bumblebees are the sole pollinators of certain plants they have coevolved with. Flowers of plants like blueberries, tomatoes, pumpkins, and many others require what's known as buzz pollination, or sonication---this means they need a bee to vibrate at a particular frequency to release their pollen (Vallejo-Marín 2019). _Bombus_ species perform this form of pollination, making them invaluable to our native ecosystems and many important food crops.
 
 Interestingly, some studies have shown evidence that managed honeybees, which are nonnative, may be outcompeting native bees for resources (Angelella, McCullough, and O'Rourke 2021)(Mallinger, Gaines-Day, and Gratton 2017). It's crucial that we understand everything that might be contributing to the decline of native bee species. The question this analysis investiates is: how does the number of managed honeybee colonies effect bumblebee occurrence in US counties? 
 
@@ -40,7 +40,7 @@ The analysis uses two different datasets---one containing managed honeybee colon
 
 The honeybee data are originally from the USDA, and were tidied and made available on data.world by Brenda Grifith. The full dataset can be found here: <https://data.world/siyeh/us-bee-stats-by-state/workspace/file?filename=Bee+Colony+Census+Data+by+County.csv>. It contains the number of managed honeybee hives reported to the USDA Census of Agriculture per US county, in 2002, 2007, and 2012.
 
-The bumblebee data are the result of a systematic nationwide survey of _Bombus_ populations conducted for a 2011 study by Cameron et al. to determine the extent of bumblebee decline in the US. The dataset can be found here: <https://www.gbif.org/dataset/c4a2c617-91a7-4d4f-90dd-a78b899f8545#temporalCoverages>. It contains observations of bumblebee occurrence from sites in 40 of the contiguous states throughout a range of habitats and elevations, and includes coordinates associated with each observation. Specimens were captured on flowers and in flight using sweep nets. The survey took place between 2007 and 2010.
+The bumblebee data, referred to as USBombus, are the result of a systematic nationwide survey of _Bombus_ populations conducted for a 2011 study by Cameron et al. to determine the extent of bumblebee decline in the US. The dataset can be found here: <https://www.gbif.org/dataset/c4a2c617-91a7-4d4f-90dd-a78b899f8545#temporalCoverages>. It contains observations of bumblebee occurrence from sites in 40 of the contiguous states throughout a range of habitats and elevations, and includes coordinates associated with each observation. Specimens were captured on flowers and in flight using sweep nets. The survey took place between 2007 and 2010.
 
 ## Methods
 
@@ -229,7 +229,7 @@ ggplot(krige_joined, aes(x = log(mean_colonies))) +
   geom_histogram()
 ```
 
-```{r, fig.align='center', fig.height=5, fig.cap="This scatterplot compares the mean number of managed honeybee hives per us County from agriculture census yeras 2002, 2007, and 2012 vs mean bumblebee occurrence per county derived from spatial interpolation of a national bee survey between 2007 and 2010."}
+```{r, fig.align='center', fig.height=5, fig.cap="This scatterplot compares the mean number of managed honeybee hives per US county from agriculture census years 2002, 2007, and 2012 vs mean bumblebee occurrence per county derived from spatial interpolation of a national bee survey conducted between 2007 and 2010."}
 ggplot(krige_joined, aes(x = mean_colonies, y = mean_pred_occurrence)) +
   geom_point(alpha = 0.5) +
   geom_smooth(method = "lm") +
@@ -249,7 +249,7 @@ ggplot(krige_joined, aes(x = mean_colonies, y = mean_pred_occurrence)) +
 # tab_model(model_summary, dv.labels = "Mean predicted Bombus occurrence")
 ```
 
-```{r, fig.cap="\nThis table presents the results of a simple linear regression of mean honeybee colonies per county on mean interpolated bumblebee occurrence per county. Discussion of the results is below.", out.width=500, fig.align='center', include=TRUE}
+```{r, fig.cap="\nThis table presents the results of a simple linear regression of mean honeybee colonies per county on mean interpolated bumblebee occurrence per county.", out.width=500, fig.align='center', include=TRUE}
 knitr::include_graphics("~/Website/petermenzies.github.io/_posts/2021-12-02-apisvsbombus/figs/bee_regression_summary.png")
 ```
 
