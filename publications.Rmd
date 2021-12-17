@@ -1,0 +1,38 @@
+---
+title: "Publications"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Potential Herbivory on the Wintergreen Orchids *Aplectrum hyemale* and *Tipularia discolor* by the Spur-Throated Grasshopper *Melanoplus acrophilus*
+
+### Peter F. Menzies, Irene M. Rossell
+
+[*Southeastern Naturalist*, 16(3)](Southeastern Naturalist): (2017). [https://doi.org/10.1656/058.016.0317](https://doi.org/10.1656/058.016.0317)
+
+### Abstract
+
+Aplectrum hyemale (Puttyroot) and Tipularia discolor (Cranefly Orchid) are wintergreen orchids native to the eastern and central United States. Plants of both species produce leaves in the fall, photosynthesize during the winter, and persist as underground corms during the summer. Odocoileus virginianus (White-tailed Deer) are implicated as the main predator of both orchids, although little information is available regarding herbivory of these or other wintergreen species. We observed early emerging overwintering nymphs of the spur-throated grasshopper Melanoplus acrophilus on leaves of Puttyroot and Cranefly Orchids in a forested site in western North Carolina. This is the first account of potential insect herbivory on these winter green orchids.
+
+### Citation
+
+Peter F. Menzies and Irene M. Rossell "Potential Herbivory on the Wintergreen Orchids *Aplectrum hyemale* and *Tipularia discolor* by the Spur-Throated Grasshopper *Melanoplus acrophilus*," [*Southeastern Naturalist*, 16(3)](Southeastern Naturalist), (1 September 2017). [https://doi.org/10.1656/058.016.0317](https://doi.org/10.1656/058.016.0317)
+
+<br>
+<br>
+
+## The habitat and abundance of two wintergreen orchids (*Aplectrum hyemale* and *Tipularia discolor*) in western North Carolina
+
+### Irene M. Rossell, Tyler T. Clabby, Peter Menzies
+
+[The J. of the Torrey Botanical Society, 144(4)](https://bioone.org/journals/the-journal-of-the-torrey-botanical-society/volume-144/issue-4):417-422 (2017). [https://doi.org/10.3159/TORREY-D-16-00039.1](https://doi.org/10.3159/TORREY-D-16-00039.1)
+
+### Abstract
+
+*Aplectrum hyemale* and *Tipularia discolor* are wintergreen orchids native to the eastern and central United States. Each produces a single leaf in late fall that persists through the winter and senesces in early spring. Both species occur in scattered patches in the understory of deciduous forests, and although they overlap in range and often co-occur in the landscape, their habitat and photosynthetic potential have not been compared directly. In this study we examine the relative abundance of *A. hyemale* and *T. discolor* in western North Carolina and quantify habitat characteristics and levels of leaf chlorophyll for each species. We conducted broad-scale surveys (walkabouts) of seven sites in Pisgah National Forest during the winter and collected habitat data in 26 patches of each species in one mesic forest. Both species shared similar habitat attributes at this site (plants located ∼ 2 m from overstory trees of similar diameter in ∼ 45% sunlight). However, across all sites, *T. discolor* was three times more abundant than *A. hyemale*, more likely to occur in large patches (> 20 plants), and more consistently distributed across a range of slope aspects. In contrast, *A. hyemale* occurred most often on slopes facing 91–180°, and at elevations > 750 m. Whereas *A. hyemale* was most often associated with *Liriodendron tulipifera* overstory trees, *T. discolor* was often in close proximity to *Quercus spp.* as well as *L. tulipifera*. Leaf chlorophyll was twice as high in *A. hyemale*, which could support differences in photosynthetic strategies, or reflect differences in leaf size and morphology.
+
+### Citation
+
+Irene M. Rossell, Tyler T. Clabby, and Peter Menzies "The habitat and abundance of two wintergreen orchids (*Aplectrum hyemale* and *Tipularia discolor*) in western North Carolina," *The Journal of the Torrey Botanical Society* 144(4), 417-422, (13 September 2017). [https://doi.org/10.3159/TORREY-D-16-00039.1](https://doi.org/10.3159/TORREY-D-16-00039.1)
