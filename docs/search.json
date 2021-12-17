@@ -6,36 +6,36 @@
       "description": "Welcome to my site, and thanks for checking it out. The content here represents the culmination of my professional\ncareer and related personal projects thus far. I update it regularly with my current endeavors. Enjoy!\n",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-12-15T11:28:40-08:00"
+      "last_modified": "2021-12-17T12:22:54-08:00"
     },
     {
       "path": "bio.html",
       "title": "Bio",
       "author": [],
       "contents": "\nI’m currently pursuing a masters degree in Environmental Data Science at UC Santa Barbara’s Bren School of Environmental Science and Management. I spent my undergraduate career studying ecology at the University of North Carolina at Asheville. I entered the realm of environmental research as a technician with the US Forest Service, conducting field work for several studies concerning eastern hemlock decline. Following this path, I pursued my own undergraduate research looking at the habitat preferences of two orchid species in Western North Carolina, and spent another field season collecting and analyzing data for a forest gap and regeneration study with NC State University. Wanting to try my hand at education and to get more involved in my community, I spent nearly three years as the Environmental Educator for a small nonprofit in Asheville. During this time I started teaching myself to code and was drawn to the idea of applying data science techniques to combat environmental issues. I hope to use the environmental data science degree I’m working towards to assess the use of emerging technologies in the fight against climate change.\n\n\n\n",
-      "last_modified": "2021-12-15T11:28:40-08:00"
+      "last_modified": "2021-12-17T12:22:55-08:00"
     },
     {
       "path": "blog.html",
       "title": "Blog Roll",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-12-15T11:28:41-08:00"
+      "last_modified": "2021-12-17T12:22:55-08:00"
     },
     {
       "path": "CV.html",
       "title": "CV",
       "description": "My education and experience",
       "author": [],
-      "contents": "\n\n\n\n\n\n\n",
-      "last_modified": "2021-12-15T11:28:42-08:00"
+      "contents": "\nEducation\nMaster of Environmental Data Science, 4.0 GPA (Expected June 2022)\nBren School of Environmental Science & Management – University of California, Santa Barbara (UCSB)\nHighlighted Coursework:\nMachine Learning in Environmental Science\nData Visualization and Communication\nRemote Sensing and Environmental Data\nSpatial Analysis for Environmental Data Science\nModeling Environmental Systems\n\nBachelor of Science in Environmental Studies, 3.7 GPA (June 2016)\nUniversity of North Carolina at Asheville (UNCA)\nHonors/Awards:\nCum Laude\nUniversity Scholar (Honors Program graduate)\nLaurel Scholarship recipient\nDepartmental Distinction in Environmental Studies\n\nLeadership/Involvement:\nUndergraduate Researcher\nEcology Department Tutor\n\n\nEnvironmental Experience\nEnvironmental Educator at Asheville GreenWorks | Asheville, NC (1/19 – 7/21)\nLead environmental education programs for K-12 classes and community groups of all ages\nCreated educational video content and built/curated pages on the organization’s website\nOversaw efforts to maintain Asheville’s status as a Bee City and co-chaired the associated Leadership Committee consisting of 20 members\nOrganized and facilitated over 30 events focused on pollinator education and outreach\nResearch Technician at NC State University (NCSU) | Asheville, NC (6/18 – 10/18)\nIdentified and mapped over 3000 trees to observe regeneration trends in forest gaps\nProcessed resulting spatial data in QGIS\nNavigated through 40 backcountry study sites and recorded locations of trees using Esri ArcPad\nAssisted with 3D mapping of study sites using LiDAR\nResearch Technician at US Forest Service (USFS) | Asheville, NC (10/15 – 8/16)\nCollected data in wilderness settings for three different eastern hemlock studies\nInput, cleaned, analyzed, and visualized data using Excel and SAS\nProcessed foliage, bark, and soil samples to assess chemical trends in woolly adelgid resistance\n\nSkills\nData science:\nProgramming languages: R, Python, SQL, Bash, HTML\nData management: experienced with importing, cleaning, and wrangling large datasets in R and Python\nData visualization: experience creating static and interactive visualizations of quantitative, categorical, and spatial datasets using matplotlib, ggplot2, tmap, Shiny, and plotly.\nSpatial analysis: experience with spatial work in R and Python using SF, SP, GeoPandas, and Google Earth Engine—as well as within a graphical interface like QGIS. Additional experience using PostGIS databases.\nStatistics: experience conducting and visualizing traditional statistical analyses in R using stats and gstat.\nWorkflow: experienced with git, GitHub, ZenHub, and Asana\nWriting: Co-authored two journal articles published in Southeastern Naturalist and Journal of the Torrey Botanical Society\nCertifications: Wilderness First Responder\n\nAdditional Work Experience\nKitchen Manager and Shift Leader – Lexington Corner Market\nAsheville, NC (3/18 – 12/18)\nZipline and Canyoneering Guide – French Broad Adventures\nMarshall, NC (6/14 – 10/17)\n\n\n\n",
+      "last_modified": "2021-12-17T12:22:56-08:00"
     },
     {
       "path": "index.html",
       "title": "Peter Menzies",
       "author": [],
       "contents": "\n\n          \n          \n          Peter Menzies\n          Home\n          Bio\n          CV\n          Blog\n          \n          \n          \n          \n          \n          ☰\n          \n          \n      \n        \n          \n            Peter Menzies\n          \n          \n            \n              \n            \n            \n              \n            \n          \n\n          \n            \n              \n                  \n                    \n                      \n                    \n                  \n                \n                                \n                  \n                    \n                      \n                    \n                  \n                \n                                \n                  \n                    \n                      \n                    \n                  \n                \n                              \n          \n\n          \n            \n              \n                                \n                  \n                    \n                  \n                \n                                \n                  \n                    \n                  \n                \n                                \n                  \n                    \n                  \n                \n                              \n            \n          \n        \n      \n    \n\n    \n    \n    ",
-      "last_modified": "2021-12-15T11:28:42-08:00"
+      "last_modified": "2021-12-17T12:22:56-08:00"
     }
   ],
   "collections": ["posts/posts.json"]

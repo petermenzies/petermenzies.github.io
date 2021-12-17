@@ -5,11 +5,85 @@ description: "My education and experience"
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-
-library(tidyverse)
 ```
 
-```{r}
+## Education
 
-```
+### **Master of Environmental Data Science**, 4.0 GPA (Expected June 2022)
 
+* **Bren School of Environmental Science & Management – University of California, Santa Barbara (UCSB)**
+
+* **Highlighted Coursework**: 
+  - *Machine Learning in Environmental Science*
+  - *Data Visualization and Communication*
+  - *Remote Sensing and Environmental Data*
+  - *Spatial Analysis for Environmental Data Science*
+  - *Modeling Environmental Systems*
+
+
+### **Bachelor of Science in Environmental Studies**, 3.7 GPA (June 2016)
+
+* **University of North Carolina at Asheville (UNCA)** 
+
+* **Honors/Awards:** 
+	* Cum Laude
+	* University Scholar (Honors Program graduate)
+	* Laurel Scholarship recipient
+	* Departmental Distinction in Environmental Studies
+
+* **Leadership/Involvement**:
+  * Undergraduate Researcher
+  * Ecology Department Tutor
+
+<br>
+
+## Environmental Experience
+
+**Environmental Educator** at **Asheville GreenWorks** | Asheville, NC  (1/19 – 7/21)
+
+* Lead environmental education programs for K-12 classes and community groups of all ages
+* Created educational video content and built/curated pages on the organization’s website
+* Oversaw efforts to maintain Asheville’s status as a Bee City and co-chaired the associated Leadership Committee consisting of 20 members
+* Organized and facilitated over 30 events focused on pollinator education and outreach
+
+**Research Technician** at **NC State University (NCSU)** | Asheville, NC  (6/18 – 10/18)
+
+* Identified and mapped over 3000 trees to observe regeneration trends in forest gaps
+* Processed resulting spatial data in QGIS
+* Navigated through 40 backcountry study sites and recorded locations of trees using Esri ArcPad
+* Assisted with 3D mapping of study sites using LiDAR
+
+**Research Technician** at **US Forest Service (USFS)** | Asheville, NC  (10/15 – 8/16)
+
+* Collected data in wilderness settings for three different eastern hemlock studies
+* Input, cleaned, analyzed, and visualized data using Excel and SAS
+* Processed foliage, bark, and soil samples to assess chemical trends in woolly adelgid resistance
+
+<br>
+
+## Skills
+
+**Data science:**
+
+* Programming languages: `R`, `Python`, `SQL`, `Bash`, `HTML`
+* Data management: experienced with importing, cleaning, and wrangling large datasets in `R` and `Python`
+* Data visualization: experience creating static and interactive visualizations of quantitative, categorical, and spatial datasets using `matplotlib`, `ggplot2`, `tmap`, `Shiny`, and `plotly`.
+* Spatial analysis: experience with spatial work in `R` and `Python` using `SF`, `SP`, `GeoPandas`, and `Google Earth Engine`—as well as within a graphical interface like QGIS. Additional experience using PostGIS databases.
+* Statistics: experience conducting and visualizing traditional statistical analyses in `R` using `stats` and `gstat`.
+* Workflow: experienced with git, GitHub, ZenHub, and Asana
+
+**Writing:** Co-authored two journal articles published in [*Southeastern Naturalist*](https://bioone.org/journals/southeastern-naturalist/volume-16/issue-3/058.016.0317/Potential-Herbivory-on-the-Wintergreen-Orchids-Aplectrum-hyemale-and-Tipularia/10.1656/058.016.0317.short) and [*Journal of the Torrey Botanical Society*](https://bioone.org/journals/the-journal-of-the-torrey-botanical-society/volume-144/issue-4/TORREY-D-16-00039.1/The-habitat-and-abundance-of-two-wintergreen-orchids-Aplectrum-hyemale/10.3159/TORREY-D-16-00039.1.short)
+
+**Certifications:** Wilderness First Responder
+
+<br>
+
+## Additional Work Experience
+
+**Kitchen Manager and Shift Leader** – Lexington Corner Market
+
+* Asheville, NC  (3/18 – 12/18)
+
+**Zipline and Canyoneering Guide** – French Broad Adventures
+
+* Marshall, NC  (6/14 – 10/17)
