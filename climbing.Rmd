@@ -1,0 +1,30 @@
+---
+title: "Climbing"
+description: "A little insight into my time spent pulling on rocks"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(sf)
+library(leaflet)
+library(here)
+```
+
+## Places I've Climbed
+
+```{r, code_folding=TRUE}
+climbing <- read_csv(here("climbing_locations.csv"))
+
+climbing_sf <- climbing %>% 
+  st_as_sf(coords = c("long", "lat"), crs = 4269)
+
+climbing_sf %>% 
+leaflet() %>%
+addProviderTiles(providers$Esri.WorldImagery, group = "World Imagery") %>%
+addProviderTiles(providers$Stamen.TonerLite, group = "Toner Lite") %>%
+addLayersControl(baseGroups = c("World Imagery", "Toner Lite")) %>%
+addMarkers(label = climbing$name,
+           popup = paste(climbing$climbing_type, "—", climbing$rock_type))
+```

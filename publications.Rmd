@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Abstract
 
-Aplectrum hyemale (Puttyroot) and Tipularia discolor (Cranefly Orchid) are wintergreen orchids native to the eastern and central United States. Plants of both species produce leaves in the fall, photosynthesize during the winter, and persist as underground corms during the summer. Odocoileus virginianus (White-tailed Deer) are implicated as the main predator of both orchids, although little information is available regarding herbivory of these or other wintergreen species. We observed early emerging overwintering nymphs of the spur-throated grasshopper Melanoplus acrophilus on leaves of Puttyroot and Cranefly Orchids in a forested site in western North Carolina. This is the first account of potential insect herbivory on these winter green orchids.
+*Aplectrum hyemale* (Puttyroot) and *Tipularia discolor* (Cranefly Orchid) are wintergreen orchids native to the eastern and central United States. Plants of both species produce leaves in the fall, photosynthesize during the winter, and persist as underground corms during the summer. *Odocoileus virginianus* (White-tailed Deer) are implicated as the main predator of both orchids, although little information is available regarding herbivory of these or other wintergreen species. We observed early emerging overwintering nymphs of the spur-throated grasshopper *Melanoplus acrophilus* on leaves of Puttyroot and Cranefly Orchids in a forested site in western North Carolina. This is the first account of potential insect herbivory on these winter green orchids.
 
 ### Citation
 
