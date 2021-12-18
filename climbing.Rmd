@@ -1,6 +1,6 @@
 ---
 title: "Climbing"
-description: "A little insight into my time spent pulling on rocks"
+description: "A little insight into my favorite pastime—pulling on rocks"
 ---
 
 ```{r setup, include=FALSE}
@@ -13,6 +13,8 @@ library(here)
 ```
 
 ## Places I've Climbed
+
+Here's an interactive visualization of all the places I've climbed over the years. It includes location names, rock types, and the forms of climbing I've done in each spot.
 
 ```{r, code_folding=TRUE}
 climbing <- read_csv(here("climbing_locations.csv"))
@@ -28,3 +30,6 @@ addLayersControl(baseGroups = c("World Imagery", "Toner Lite")) %>%
 addMarkers(label = climbing$name,
            popup = paste(climbing$climbing_type, "—", climbing$rock_type))
 ```
+
+
+
