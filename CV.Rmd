@@ -70,7 +70,7 @@ knitr::opts_chunk$set(echo = TRUE)
 * Data visualization: experience creating static and interactive visualizations of quantitative, categorical, and spatial datasets using `matplotlib`, `ggplot2`, `tmap`, `Shiny`, and `plotly`.
 * Spatial analysis: experience with spatial work in `R` and `Python` using `SF`, `SP`, `GeoPandas`, and `Google Earth Engine`—as well as within a graphical interface like QGIS. Additional experience using PostGIS databases.
 * Statistics: experience conducting and visualizing traditional statistical analyses in `R` using `stats` and `gstat`.
-* Workflow: experienced with git, GitHub, ZenHub, and Asana
+* Workflow: experienced with Git, GitHub, ZenHub, and Asana
 
 **Writing:** Co-authored two journal articles published in [*Southeastern Naturalist*](https://bioone.org/journals/southeastern-naturalist/volume-16/issue-3/058.016.0317/Potential-Herbivory-on-the-Wintergreen-Orchids-Aplectrum-hyemale-and-Tipularia/10.1656/058.016.0317.short) and [*Journal of the Torrey Botanical Society*](https://bioone.org/journals/the-journal-of-the-torrey-botanical-society/volume-144/issue-4/TORREY-D-16-00039.1/The-habitat-and-abundance-of-two-wintergreen-orchids-Aplectrum-hyemale/10.3159/TORREY-D-16-00039.1.short)
 
