@@ -20,6 +20,18 @@
       <media:content url="https://petermenzies.github.io/posts/2021-12-02-apisvsbombus/apis_vs_bombus_files/figure-html5/unnamed-chunk-4-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
     <item>
+      <title>Assessing Iowa's potential for wind energy generation</title>
+      <dc:creator>Peter Menzies</dc:creator>
+      <link>https://petermenzies.github.io/posts/2021-12-20-iowa-wind-energy</link>
+      <description>A spatial analysis in python that estimates the theoretical amount of energy Iowa could produce via wind turbine.</description>
+      <category>Data Science</category>
+      <category>Python</category>
+      <category>Spatial Analysis</category>
+      <guid>https://petermenzies.github.io/posts/2021-12-20-iowa-wind-energy</guid>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://petermenzies.github.io/posts/2021-12-20-iowa-wind-energy/files/output_38_0.png" medium="image" type="image/png" width="607" height="413"/>
+    </item>
+    <item>
       <title>Secret Santa R Script</title>
       <dc:creator>Peter Menzies</dc:creator>
       <link>https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange</link>
