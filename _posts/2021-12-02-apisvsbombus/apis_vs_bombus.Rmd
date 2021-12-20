@@ -9,6 +9,9 @@ date: 12-02-2021
 output:
   distill::distill_article:
     self_contained: false
+categories: 
+  - R
+  - "Data Science"
 ---
 
 ```{r setup, echo=FALSE}

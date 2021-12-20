@@ -1,7 +1,7 @@
 ---
 title: "Secret Santa R Script"
 description: |
-  A script I created to automate my family's yearly secret santa gift exchange
+  A script I created to automate my family's yearly secret santa gift exchange 🎄
 author:
   - name: Peter Menzies
     url: {}
@@ -19,60 +19,141 @@ slug: "2021-23-08-secret-santa-r-script"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### My family's yearly gift exchange
+### A litle context...
 
-Here's a little context needed to understand the program I created, before we get to the actual code. 
+Every year my extended family does a gift exchange where each member of the family is randomly paired with another member—the one caveat being that each person must be matched with someone outside of their immediate family. Traditionally, the matches are assigned using the good old "pick a name from a hat" method. If you draw a name from within your immediate family, you try again until you get someone who isn't. This process seemed like an excellent candidate for automation, and with a couple weeks of R under my belt it felt like a perfect project to apply what I had learned so far.
 
-Each year my extended family does a secret santa gift exchange where each member of the family is randomly paired with another — the one caveat being that each person must be matched with someone outside of their nuclear family. Traditionally, the matches are assigned using the good old "pick a name from the hat" method. If you draw a name from within your immediate family, you try again until you get someone who isn't. This process seemed like an excellent candidate for automation, and with a couple weeks of R under my belt, it felt like a perfect task to apply what I had learned so far.
-
-### Packages used: `tidyverse` and `here`
+### Packages used: `tidyverse`, `here`, and `gt`
 
 ```{r}
 library(tidyverse)
 library(here)
+library(gt)
 ```
 
 
-### Creating data frame with family member's and their corresponding family unit
+### Reading in data
 
-I read in a CSV that contains two variables we care about: `Person` and `Group`. Each family member is listed in the `Person` column, and the label created for their family unit under `Group`. 
+Firstly, I read in a CSV that contains two variables we care about: `Person` and `Group`. Each family member is listed in the `Person` column, and the label created for their family unit under `Group`. 
 
 ```{r}
-xmas_names <- read_csv(here::here("data", "xmas_names.csv")) %>% 
+xmas_names <- read_csv(here("data", "xmas_names.csv")) %>% 
   select(Person, Group) 
 ```
 
 ### Creating the function
 
-I want to create a function that outputs a data frame with two columns `Giver` and `Recipient`, that lists each member of my family and who they will be giving a gift to. 
+I want to create a function that outputs a dataframe with two columns, `Giver` and `Recipient`, that lists each member of the family and who they will be giving a gift to. Let's call the function `match_maker`.
 
-Let's start by preemptively creating this object, `ouput_df`, before we get into the for loop. I've made a data frame of the proper dimensions, and also a vector that we'll later populate with the names of those that have already been matched.
+The function will first create the framework of the aforementioned `ouput_df` and a vector that we'll populate with the names of those that have already been matched.
 
-```{r}
-output_df <- data.frame(Giver = seq(1:nrow(xmas_names)), Recipient = seq(1:nrow(xmas_names)))
-already_matched <- vector(mode = "character")
+```{r, eval=FALSE}
+match_maker <- function() {
+
+  output_df <- data.frame(Giver = seq(1:nrow(xmas_names)), Recipient = seq(1:nrow(xmas_names)))
+  already_matched <- vector(mode = "character")
 ```
 
 ### For loop
 
-Within our function we'll have a for loop that iterates through each row in our `xmas_names` data frame and randomly pairs the `Person` in each row with another person from outside of their immediate family unit (`group`). 
+Within our function we'll have a for loop that iterates through each row in our `xmas_names` dataframe and randomly pairs the `Person` in each row with another person from outside of their immediate family unit (`Group`). 
 
-We'll iterate along the sequence `1:nrow(xmas_names)` 
+The loop will iterate along the sequence `1:nrow(xmas_names)`.
 
-In order to adjust our pool of "allowable" matches each iteration we're going to create a temporary data frame, `temp_names`, that is first bound to xmas_names and then filtered based on our two criteria: the person cannot be in the same `Group` (family unit) and cannot have already been matched with someone else already. We'll use `dplyr::filter()` to subset `temp_names` to meet these parameters.
+In order to adjust our pool of "allowable" matches within each iteration, we're going to create a temporary dataframe—`temp_names`—that is first assigned to `xmas_names` and then filtered based on our two criteria: the person isn't in the same `Group` and hasn't been matched already. We'll use `dplyr::filter()` to subset `temp_names` to meet these parameters.
 
-Next, before the loop goes any further we'll need to add an `if` statement that saves our function from hitting a dead end. Depending on the order in which matches are randomly assigned, sometimes only members of a single family unit remain in the final iterations. When this happens, our `temp_names` will be empty because there are no longer any viable matches, and our code will break. The `if` statement will just return our function when `TRUE`, so the function will continue to be called until we get a sequence of matches that works!
+```{r, eval=FALSE}
+  for (i in 1:nrow(xmas_names)) {
+    
+    temp_names <- xmas_names %>%
+      filter(Group != xmas_names$Group[i]) %>% 
+      filter(!Person %in% already_matched)
+```
 
-Next we're going to generate a random number using the `sample()` function and assign it to `sample_number`. This number will be used to index our random match. The number has to be in the range `1:nrow(temp_names)` because `temp_names` is our temporary data frame of viable match candidates. 
+Next, before the loop goes any further we'll need to add an `if` statement that saves our function from hitting a dead end. Depending on the order in which matches are randomly assigned, it's possible for only members of a single family unit to remain in the final iterations. When this happens, our `temp_names` dataframe will be empty because there are no longer any viable matches, and our code will break. The `if` statement will restart the function if `temp_names` becomes empty before all people have been matched.
 
-We'll use `sample_number` to index `temp_names$Person` and assign that value to `xmas_match`. For consistency, we'll assign the person currently being matched to `matchee`.
+```{r, eval=FALSE}
+    if (nrow(temp_names) == 0) {
+      return(match_maker())
+```
 
-Now we need to `append()` our current `xmas_match` to our vector `already_matched` which is used to filter `temp_names` so that person can't be matched with anyone else.
+Next we're going to generate a random number using the `sample()` function and assign it to `sample_number`. We'll use this number to index `temp_names$Person` and assign that value to `match`. `sample_number` has to be in the range `1:nrow(temp_names)` because `temp_names` is our temporary dataframe of viable match candidates. The person being matched we can call `matchee`.
 
+And we need to `append()` our current `match` to our vector `already_matched` which is used to filter `temp_names` so that person can't be selected as a recipient again.
 
+```{r, eval=FALSE}
+    }
+    
+    sample_number <- sample(1:nrow(temp_names), 1)
+    
+    match <- temp_names$Person[sample_number]
+    
+    matchee <- xmas_names[[i, 1]]
+    
+    already_matched <- append(already_matched, match)
+```
+
+Lastly, we'll add `matchee` and `match` to the `output_df`, and instruct the function to return `output_df` once the for loop has iterated through all names on the list.
+
+```{r, eval=FALSE}
+    output_df$Giver[i] <- matchee
+    output_df$Recipient[i] <- match
+    
+  }
+  
+  return(output_df)
+  
+}
+```
+
+### Function in full:
 
 ```{r}
+match_maker <- function() {
 
+  output_df <- data.frame(Giver = seq(1:nrow(xmas_names)), Recipient = seq(1:nrow(xmas_names)))
+  already_matched <- vector(mode = "character")
+  
+  for (i in 1:nrow(xmas_names)) {
+    
+    temp_names <- xmas_names %>%
+      filter(Group != xmas_names$Group[i]) %>% 
+      filter(!Person %in% already_matched)
+    
+    if (nrow(temp_names) == 0) {
+      return(match_maker())
+    }
+    
+    sample_number <- sample(1:nrow(temp_names), 1)
+    
+    match <- temp_names$Person[sample_number]
+    
+    matchee <- xmas_names[[i, 1]]
+    
+    already_matched <- append(already_matched, match)
+    
+    output_df$Giver[i] <- matchee
+    output_df$Recipient[i] <- match
+    
+  }
+  
+  return(output_df)
+  
+}
 ```
+
+### The result:
+
+Now let's make some matches! (I used `gt()` here just to create a nice table for the output)
+
+```{r}
+match_maker() %>% gt()
+```
+
+
+
+
+
+
 
 

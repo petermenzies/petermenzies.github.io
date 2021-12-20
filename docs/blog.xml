@@ -13,6 +13,8 @@
       <dc:creator>Peter Menzies</dc:creator>
       <link>https://petermenzies.github.io/posts/2021-12-02-apisvsbombus</link>
       <description>The following article details my statistical analysis of honeybee colonies and bumblebee occurrence in the US, using spatial interpolation and simple linear regression.</description>
+      <category>R</category>
+      <category>Data Science</category>
       <guid>https://petermenzies.github.io/posts/2021-12-02-apisvsbombus</guid>
       <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
       <media:content url="https://petermenzies.github.io/posts/2021-12-02-apisvsbombus/apis_vs_bombus_files/figure-html5/unnamed-chunk-4-1.png" medium="image" type="image/png" width="1248" height="768"/>
@@ -21,7 +23,7 @@
       <title>Secret Santa R Script</title>
       <dc:creator>Peter Menzies</dc:creator>
       <link>https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange</link>
-      <description>A script I created to automate my family's yearly secret santa gift exchange</description>
+      <description>A script I created to automate my family's yearly secret santa gift exchange 🎄</description>
       <category>R</category>
       <guid>https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange</guid>
       <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
