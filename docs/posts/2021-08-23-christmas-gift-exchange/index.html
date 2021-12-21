@@ -86,9 +86,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-<title>Peter Menzies: Secret Santa R Script</title>
+<title>Peter Menzies: SecRet Santa</title>
 
-<meta property="description" itemprop="description" content="A script I created to automate my family&#39;s yearly secret santa gift exchange 🎄"/>
+<meta property="description" itemprop="description" content="An R function I built to automate my family&#39;s yearly secret santa gift exchange"/>
 
 <link rel="canonical" href="https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/"/>
 
@@ -98,9 +98,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta name="article:author" content="Peter Menzies"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="Peter Menzies: Secret Santa R Script"/>
+<meta property="og:title" content="Peter Menzies: SecRet Santa"/>
 <meta property="og:type" content="article"/>
-<meta property="og:description" content="A script I created to automate my family&#39;s yearly secret santa gift exchange 🎄"/>
+<meta property="og:description" content="An R function I built to automate my family&#39;s yearly secret santa gift exchange"/>
 <meta property="og:url" content="https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/"/>
 <meta property="og:image" content="https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/chRistmas_wide.png"/>
 <meta property="og:image:width" content="1200"/>
@@ -110,15 +110,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <!--  https://dev.twitter.com/cards/types/summary -->
 <meta property="twitter:card" content="summary_large_image"/>
-<meta property="twitter:title" content="Peter Menzies: Secret Santa R Script"/>
-<meta property="twitter:description" content="A script I created to automate my family&#39;s yearly secret santa gift exchange 🎄"/>
+<meta property="twitter:title" content="Peter Menzies: SecRet Santa"/>
+<meta property="twitter:description" content="An R function I built to automate my family&#39;s yearly secret santa gift exchange"/>
 <meta property="twitter:url" content="https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/"/>
 <meta property="twitter:image" content="https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/chRistmas_wide.png"/>
 <meta property="twitter:image:width" content="1200"/>
 <meta property="twitter:image:height" content="800"/>
 
 <!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
-<meta name="citation_title" content="Peter Menzies: Secret Santa R Script"/>
+<meta name="citation_title" content="Peter Menzies: SecRet Santa"/>
 <meta name="citation_fulltext_html_url" content="https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/"/>
 <meta name="citation_online_date" content="2021/08/23"/>
 <meta name="citation_publication_date" content="2021/08/23"/>
@@ -127,7 +127,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","slug","preview","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Secret Santa R Script"]},{"type":"character","attributes":{},"value":["A script I created to automate my family's yearly secret santa gift exchange 🎄"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Peter Menzies"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["08-23-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["R"]},{"type":"character","attributes":{},"value":["2021-23-08-secret-santa-r-script"]},{"type":"character","attributes":{},"value":["chRistmas_wide.png"]},{"type":"character","attributes":{},"value":["https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/"]},{"type":"character","attributes":{},"value":["https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","categories","slug","preview","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["SecRet Santa"]},{"type":"character","attributes":{},"value":["An R function I built to automate my family's yearly secret santa gift exchange"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Peter Menzies"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":[]}},"value":[]}]}]},{"type":"character","attributes":{},"value":["08-23-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]},{"type":"character","attributes":{},"value":["R"]},{"type":"character","attributes":{},"value":["2021-23-08-secret-santa-r-script"]},{"type":"character","attributes":{},"value":["chRistmas_wide.png"]},{"type":"character","attributes":{},"value":["https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/"]},{"type":"character","attributes":{},"value":["https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2430,7 +2430,7 @@ d-appendix d-footnote-list a.footnote-backlink {
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Secret Santa R Script","description":"A script I created to automate my family's yearly secret santa gift exchange 🎄","authors":[{"author":"Peter Menzies","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-08-23T00:00:00.000+00:00","citationText":"Menzies, 2021"}
+{"title":"SecRet Santa","description":"An R function I built to automate my family's yearly secret santa gift exchange","authors":[{"author":"Peter Menzies","authorURL":{},"affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2021-08-23T00:00:00.000+00:00","citationText":"Menzies, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2460,13 +2460,13 @@ d-appendix d-footnote-list a.footnote-backlink {
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Secret Santa R Script</h1>
+<h1>SecRet Santa</h1>
 <!--radix_placeholder_categories-->
 <div class="dt-tags">
   <a href="../../blog.html#category:R" class="dt-tag">R</a>
 </div>
 <!--/radix_placeholder_categories-->
-<p><p>A script I created to automate my family’s yearly secret santa gift exchange 🎄</p></p>
+<p><p>An R function I built to automate my family’s yearly secret santa gift exchange</p></p>
 </div>
 
 <div class="d-byline">
@@ -2589,12 +2589,12 @@ d-appendix d-footnote-list a.footnote-backlink {
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>match_maker</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>%&gt;%</span> <span class='fu'><a href='https://gt.rstudio.com/reference/gt.html'>gt</a></span><span class='op'>(</span><span class='op'>)</span>
 </code></pre>
 </div>
-<div id="lyyuynbbtr" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="irolgxxeps" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#lyyuynbbtr .gt_table {
+#irolgxxeps .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -2619,7 +2619,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   border-left-color: #D3D3D3;
 }
 
-#lyyuynbbtr .gt_heading {
+#irolgxxeps .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2631,7 +2631,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   border-right-color: #D3D3D3;
 }
 
-#lyyuynbbtr .gt_title {
+#irolgxxeps .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2641,7 +2641,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   border-bottom-width: 0;
 }
 
-#lyyuynbbtr .gt_subtitle {
+#irolgxxeps .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2651,13 +2651,13 @@ d-appendix d-footnote-list a.footnote-backlink {
   border-top-width: 0;
 }
 
-#lyyuynbbtr .gt_bottom_border {
+#irolgxxeps .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#lyyuynbbtr .gt_col_headings {
+#irolgxxeps .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2672,7 +2672,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   border-right-color: #D3D3D3;
 }
 
-#lyyuynbbtr .gt_col_heading {
+#irolgxxeps .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2692,7 +2692,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   overflow-x: hidden;
 }
 
-#lyyuynbbtr .gt_column_spanner_outer {
+#irolgxxeps .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2704,15 +2704,15 @@ d-appendix d-footnote-list a.footnote-backlink {
   padding-right: 4px;
 }
 
-#lyyuynbbtr .gt_column_spanner_outer:first-child {
+#irolgxxeps .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#lyyuynbbtr .gt_column_spanner_outer:last-child {
+#irolgxxeps .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#lyyuynbbtr .gt_column_spanner {
+#irolgxxeps .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2724,7 +2724,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   width: 100%;
 }
 
-#lyyuynbbtr .gt_group_heading {
+#irolgxxeps .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2746,7 +2746,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   vertical-align: middle;
 }
 
-#lyyuynbbtr .gt_empty_group_heading {
+#irolgxxeps .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2761,15 +2761,15 @@ d-appendix d-footnote-list a.footnote-backlink {
   vertical-align: middle;
 }
 
-#lyyuynbbtr .gt_from_md > :first-child {
+#irolgxxeps .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#lyyuynbbtr .gt_from_md > :last-child {
+#irolgxxeps .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#lyyuynbbtr .gt_row {
+#irolgxxeps .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2788,7 +2788,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   overflow-x: hidden;
 }
 
-#lyyuynbbtr .gt_stub {
+#irolgxxeps .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2800,7 +2800,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   padding-left: 12px;
 }
 
-#lyyuynbbtr .gt_summary_row {
+#irolgxxeps .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2810,7 +2810,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   padding-right: 5px;
 }
 
-#lyyuynbbtr .gt_first_summary_row {
+#irolgxxeps .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2820,7 +2820,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   border-top-color: #D3D3D3;
 }
 
-#lyyuynbbtr .gt_grand_summary_row {
+#irolgxxeps .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2830,7 +2830,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   padding-right: 5px;
 }
 
-#lyyuynbbtr .gt_first_grand_summary_row {
+#irolgxxeps .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2840,11 +2840,11 @@ d-appendix d-footnote-list a.footnote-backlink {
   border-top-color: #D3D3D3;
 }
 
-#lyyuynbbtr .gt_striped {
+#irolgxxeps .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#lyyuynbbtr .gt_table_body {
+#irolgxxeps .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2853,7 +2853,7 @@ d-appendix d-footnote-list a.footnote-backlink {
   border-bottom-color: #D3D3D3;
 }
 
-#lyyuynbbtr .gt_footnotes {
+#irolgxxeps .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2867,13 +2867,13 @@ d-appendix d-footnote-list a.footnote-backlink {
   border-right-color: #D3D3D3;
 }
 
-#lyyuynbbtr .gt_footnote {
+#irolgxxeps .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#lyyuynbbtr .gt_sourcenotes {
+#irolgxxeps .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2887,41 +2887,41 @@ d-appendix d-footnote-list a.footnote-backlink {
   border-right-color: #D3D3D3;
 }
 
-#lyyuynbbtr .gt_sourcenote {
+#irolgxxeps .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#lyyuynbbtr .gt_left {
+#irolgxxeps .gt_left {
   text-align: left;
 }
 
-#lyyuynbbtr .gt_center {
+#irolgxxeps .gt_center {
   text-align: center;
 }
 
-#lyyuynbbtr .gt_right {
+#irolgxxeps .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#lyyuynbbtr .gt_font_normal {
+#irolgxxeps .gt_font_normal {
   font-weight: normal;
 }
 
-#lyyuynbbtr .gt_font_bold {
+#irolgxxeps .gt_font_bold {
   font-weight: bold;
 }
 
-#lyyuynbbtr .gt_font_italic {
+#irolgxxeps .gt_font_italic {
   font-style: italic;
 }
 
-#lyyuynbbtr .gt_super {
+#irolgxxeps .gt_super {
   font-size: 65%;
 }
 
-#lyyuynbbtr .gt_footnote_marks {
+#irolgxxeps .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 65%;
@@ -2937,57 +2937,57 @@ d-appendix d-footnote-list a.footnote-backlink {
   </thead>
   <tbody class="gt_table_body">
     <tr><td class="gt_row gt_left">Anna</td>
-<td class="gt_row gt_left">Kate</td></tr>
-    <tr><td class="gt_row gt_left">Phil</td>
-<td class="gt_row gt_left">Barbara</td></tr>
-    <tr><td class="gt_row gt_left">Holt</td>
-<td class="gt_row gt_left">Hilary</td></tr>
-    <tr><td class="gt_row gt_left">Casey B</td>
-<td class="gt_row gt_left">Claire</td></tr>
-    <tr><td class="gt_row gt_left">Peter</td>
-<td class="gt_row gt_left">Rachel</td></tr>
-    <tr><td class="gt_row gt_left">Robbie</td>
-<td class="gt_row gt_left">Luke</td></tr>
-    <tr><td class="gt_row gt_left">Laurie</td>
-<td class="gt_row gt_left">Pam</td></tr>
-    <tr><td class="gt_row gt_left">Austin</td>
-<td class="gt_row gt_left">Tommy</td></tr>
-    <tr><td class="gt_row gt_left">Casey O</td>
-<td class="gt_row gt_left">Peter</td></tr>
-    <tr><td class="gt_row gt_left">Jesse</td>
-<td class="gt_row gt_left">Steve</td></tr>
-    <tr><td class="gt_row gt_left">Kevin</td>
-<td class="gt_row gt_left">Phil</td></tr>
-    <tr><td class="gt_row gt_left">Steve</td>
-<td class="gt_row gt_left">Laura</td></tr>
-    <tr><td class="gt_row gt_left">Pam</td>
-<td class="gt_row gt_left">David</td></tr>
-    <tr><td class="gt_row gt_left">Justin</td>
-<td class="gt_row gt_left">James</td></tr>
-    <tr><td class="gt_row gt_left">Hilary</td>
-<td class="gt_row gt_left">Casey O</td></tr>
-    <tr><td class="gt_row gt_left">Adam</td>
-<td class="gt_row gt_left">Jason</td></tr>
-    <tr><td class="gt_row gt_left">Claire</td>
-<td class="gt_row gt_left">Holt</td></tr>
-    <tr><td class="gt_row gt_left">Tommy</td>
-<td class="gt_row gt_left">Kevin</td></tr>
-    <tr><td class="gt_row gt_left">Barbara</td>
-<td class="gt_row gt_left">Austin</td></tr>
-    <tr><td class="gt_row gt_left">Jason</td>
-<td class="gt_row gt_left">Adam</td></tr>
-    <tr><td class="gt_row gt_left">Laura</td>
-<td class="gt_row gt_left">Justin</td></tr>
-    <tr><td class="gt_row gt_left">Luke</td>
-<td class="gt_row gt_left">Laurie</td></tr>
-    <tr><td class="gt_row gt_left">Rachel</td>
-<td class="gt_row gt_left">Robbie</td></tr>
-    <tr><td class="gt_row gt_left">James</td>
-<td class="gt_row gt_left">Anna</td></tr>
-    <tr><td class="gt_row gt_left">Kate</td>
 <td class="gt_row gt_left">Jesse</td></tr>
-    <tr><td class="gt_row gt_left">David</td>
+    <tr><td class="gt_row gt_left">Phil</td>
+<td class="gt_row gt_left">Laura</td></tr>
+    <tr><td class="gt_row gt_left">Holt</td>
+<td class="gt_row gt_left">Kate</td></tr>
+    <tr><td class="gt_row gt_left">Casey B</td>
+<td class="gt_row gt_left">James</td></tr>
+    <tr><td class="gt_row gt_left">Peter</td>
+<td class="gt_row gt_left">Laurie</td></tr>
+    <tr><td class="gt_row gt_left">Robbie</td>
+<td class="gt_row gt_left">Rachel</td></tr>
+    <tr><td class="gt_row gt_left">Laurie</td>
+<td class="gt_row gt_left">Hilary</td></tr>
+    <tr><td class="gt_row gt_left">Austin</td>
 <td class="gt_row gt_left">Casey B</td></tr>
+    <tr><td class="gt_row gt_left">Casey O</td>
+<td class="gt_row gt_left">Tommy</td></tr>
+    <tr><td class="gt_row gt_left">Jesse</td>
+<td class="gt_row gt_left">Jason</td></tr>
+    <tr><td class="gt_row gt_left">Kevin</td>
+<td class="gt_row gt_left">Holt</td></tr>
+    <tr><td class="gt_row gt_left">Steve</td>
+<td class="gt_row gt_left">Kevin</td></tr>
+    <tr><td class="gt_row gt_left">Pam</td>
+<td class="gt_row gt_left">Luke</td></tr>
+    <tr><td class="gt_row gt_left">Justin</td>
+<td class="gt_row gt_left">David</td></tr>
+    <tr><td class="gt_row gt_left">Hilary</td>
+<td class="gt_row gt_left">Barbara</td></tr>
+    <tr><td class="gt_row gt_left">Adam</td>
+<td class="gt_row gt_left">Anna</td></tr>
+    <tr><td class="gt_row gt_left">Claire</td>
+<td class="gt_row gt_left">Phil</td></tr>
+    <tr><td class="gt_row gt_left">Tommy</td>
+<td class="gt_row gt_left">Casey O</td></tr>
+    <tr><td class="gt_row gt_left">Barbara</td>
+<td class="gt_row gt_left">Robbie</td></tr>
+    <tr><td class="gt_row gt_left">Jason</td>
+<td class="gt_row gt_left">Justin</td></tr>
+    <tr><td class="gt_row gt_left">Laura</td>
+<td class="gt_row gt_left">Pam</td></tr>
+    <tr><td class="gt_row gt_left">Luke</td>
+<td class="gt_row gt_left">Peter</td></tr>
+    <tr><td class="gt_row gt_left">Rachel</td>
+<td class="gt_row gt_left">Adam</td></tr>
+    <tr><td class="gt_row gt_left">James</td>
+<td class="gt_row gt_left">Claire</td></tr>
+    <tr><td class="gt_row gt_left">Kate</td>
+<td class="gt_row gt_left">Steve</td></tr>
+    <tr><td class="gt_row gt_left">David</td>
+<td class="gt_row gt_left">Austin</td></tr>
   </tbody>
   
   
@@ -3009,11 +3009,11 @@ d-appendix d-footnote-list a.footnote-backlink {
 <div class="appendix-bottom">
   <h3 id="citation">Citation</h3>
   <p>For attribution, please cite this work as</p>
-  <pre class="citation-appendix short">Menzies (2021, Aug. 23). Peter Menzies: Secret Santa R Script. Retrieved from https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/</pre>
+  <pre class="citation-appendix short">Menzies (2021, Aug. 23). Peter Menzies: SecRet Santa. Retrieved from https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/</pre>
   <p>BibTeX citation</p>
   <pre class="citation-appendix long">@misc{2021-23-08-secret-santa-r-script,
   author = {Menzies, Peter},
-  title = {Peter Menzies: Secret Santa R Script},
+  title = {Peter Menzies: SecRet Santa},
   url = {https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/},
   year = {2021}
 }</pre>
