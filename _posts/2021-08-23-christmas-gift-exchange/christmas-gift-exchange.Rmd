@@ -1,7 +1,7 @@
 ---
 title: "SecRet Santa"
 description: |
-  An R function I built to automate my family's yearly secret santa gift exchange
+  An R function I built to automate my family's secret santa matching process
 author:
   - name: Peter Menzies
     url: {}

@@ -47,7 +47,7 @@
       <title>SecRet Santa</title>
       <dc:creator>Peter Menzies</dc:creator>
       <link>https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange</link>
-      <description>An R function I built to automate my family's yearly secret santa gift exchange</description>
+      <description>An R function I built to automate my family's secret santa matching process</description>
       <category>R</category>
       <guid>https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange</guid>
       <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
