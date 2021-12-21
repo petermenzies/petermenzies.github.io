@@ -12,8 +12,8 @@ output:
 categories:
   - R
 slug: "2021-23-08-secret-santa-r-script"
+preview: chRistmas_wide.png
 ---
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
