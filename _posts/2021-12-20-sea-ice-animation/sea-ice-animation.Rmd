@@ -1,5 +1,5 @@
 ---
-title: "Creating an animated visualization of sea ice concentration"
+title: "Creating an animated visualization of sea ice concentration with imageio"
 description: |
   A brief rundown of creating rasters and compiling them into an animated gif entirely in python
 author:
@@ -11,6 +11,7 @@ output:
     self_contained: false
 preview: ice_81_20.gif
 categories:
+  - Function I Learned
   - Python
   - Spatial Analysis
 ---
