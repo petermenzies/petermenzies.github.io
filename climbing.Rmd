@@ -5,11 +5,6 @@ description: "A little insight into my favorite pastime—pulling on rocks"
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-
-library(tidyverse)
-library(sf)
-library(leaflet)
-library(here)
 ```
 
 ## Places I've Climbed
@@ -17,6 +12,11 @@ library(here)
 Here's an interactive visualization I created of all the places I've climbed over the years. It includes location names, rock types, and the forms of climbing I've done at each spot.
 
 ```{r, code_folding=TRUE}
+library(tidyverse)
+library(sf)
+library(leaflet)
+library(here)
+
 climbing <- read_csv(here("data", "climbing_locations.csv"))
 
 climbing_sf <- climbing %>% 

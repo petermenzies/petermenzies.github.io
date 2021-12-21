@@ -7,14 +7,26 @@
     <description>My Website
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 02 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Creating an animated visualization of sea ice concentration</title>
+      <dc:creator>Peter Menzies</dc:creator>
+      <link>https://petermenzies.github.io/posts/2021-12-20-sea-ice-animation</link>
+      <description>A brief rundown of creating rasters and compiling them into an animated gif entirely in python</description>
+      <category>Python</category>
+      <category>Spatial Analysis</category>
+      <guid>https://petermenzies.github.io/posts/2021-12-20-sea-ice-animation</guid>
+      <pubDate>Mon, 20 Dec 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://petermenzies.github.io/posts/2021-12-20-sea-ice-animation/ice_81_20.gif" medium="image" type="image/gif"/>
+    </item>
     <item>
       <title>Effects of managed honeybee colonies on bumblebee occurrence in the US</title>
       <dc:creator>Peter Menzies</dc:creator>
       <link>https://petermenzies.github.io/posts/2021-12-02-apisvsbombus</link>
       <description>The following article details my statistical analysis of honeybee colonies and bumblebee occurrence in the US, using spatial interpolation and simple linear regression.</description>
-      <category>R</category>
       <category>Data Science</category>
+      <category>R</category>
+      <category>Spatial Analysis</category>
       <guid>https://petermenzies.github.io/posts/2021-12-02-apisvsbombus</guid>
       <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
       <media:content url="https://petermenzies.github.io/posts/2021-12-02-apisvsbombus/apis_vs_bombus_files/figure-html5/unnamed-chunk-4-1.png" medium="image" type="image/png" width="1248" height="768"/>

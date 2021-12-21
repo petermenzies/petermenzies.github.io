@@ -1,7 +1,7 @@
 ---
 title: "Effects of managed honeybee colonies on bumblebee occurrence in the US"
 description: |
-  The following article details my statistical analysis of honeybee colonies and bumblebee occurrence in the US, using spatial interpolation and simple linear regression. 
+  My statistical analysis of honeybee colonies and bumblebee occurrence in the US, using spatial interpolation and simple linear regression. 
 author:
   - name: Peter Menzies
     url: {}
@@ -10,8 +10,9 @@ output:
   distill::distill_article:
     self_contained: false
 categories: 
+  - Data Science
   - R
-  - "Data Science"
+  - Spatial Analysis
 ---
 
 ```{r setup, echo=FALSE}

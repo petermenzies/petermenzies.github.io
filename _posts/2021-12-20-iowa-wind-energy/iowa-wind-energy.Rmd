@@ -21,7 +21,7 @@ preview: files/output_38_0.png
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-***Note****: This analysis was originally a Jupyter notebook which I ported over to an Rmd. You can view the analysis in its original format here:* [iowa-wind-energy.ipynb](files/iowa_wind_jupyter.html)  
+***Note****: This analysis was originally a Jupyter notebook which I ported over to an Rmd. You can view it in its original format here:* [iowa-wind-energy.ipynb](files/iowa_wind_jupyter.html)  
 
 ### Libraries
 
