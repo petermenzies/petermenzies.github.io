@@ -21,7 +21,7 @@ categories:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-### Purpose
+### Overview
 
 The goal here is to rasterize the contents of a netCDF file containing global sea ice concentrations in October from 1981 to 2020, and then compile each of those rasters into a single gif. 
 
@@ -104,7 +104,7 @@ for i in range(0, len(ice)):
 
 ### Creating the gif
 
-Lastly we'll use the `imageio` library to create the final animation. To do this, we iterate through the list of png files we created in the last loop, reading each of them in using `imageio.imread()` and compiling them into a new list. We then feed that list into `imageio.mimsave()` which aggregates and exports the images as a gif. The default frame rate is quite fast, so we can reduce the `duration` to 0.5 seconds to make the animation a bit more digestible. 
+Lastly we'll use the `imageio` library to create the final animation. To do this, we iterate through the list of png files we created in the last loop, reading each of them in using `imageio.imread()` and compiling them into a new list. We then feed that list into `imageio.mimsave()` which aggregates and exports the images as a gif. The default frame rate is quite fast, so we can increase the `duration` to 0.5 seconds to make the animation a bit more digestible. 
 
 ```python
 png_imageio = []

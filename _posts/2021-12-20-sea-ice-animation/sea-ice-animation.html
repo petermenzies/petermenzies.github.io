@@ -1483,7 +1483,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<h3 id="purpose">Purpose</h3>
+<h3 id="overview">Overview</h3>
 <p>The goal here is to rasterize the contents of a netCDF file containing global sea ice concentrations in October from 1981 to 2020, and then compile each of those rasters into a single gif.</p>
 <h3 id="libraries">Libraries</h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xarray <span class="im">as</span> xr</span>
@@ -1544,7 +1544,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    <span class="co"># compiling a list of the file names for the next step</span></span>
 <span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>    rasters.append(png)</span></code></pre></div>
 <h3 id="creating-the-gif">Creating the gif</h3>
-<p>Lastly we’ll use the <code>imageio</code> library to create the final animation. To do this, we iterate through the list of png files we created in the last loop, reading each of them in using <code>imageio.imread()</code> and compiling them into a new list. We then feed that list into <code>imageio.mimsave()</code> which aggregates and exports the images as a gif. The default frame rate is quite fast, so we can reduce the <code>duration</code> to 0.5 seconds to make the animation a bit more digestible.</p>
+<p>Lastly we’ll use the <code>imageio</code> library to create the final animation. To do this, we iterate through the list of png files we created in the last loop, reading each of them in using <code>imageio.imread()</code> and compiling them into a new list. We then feed that list into <code>imageio.mimsave()</code> which aggregates and exports the images as a gif. The default frame rate is quite fast, so we can increase the <code>duration</code> to 0.5 seconds to make the animation a bit more digestible.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>png_imageio <span class="op">=</span> []</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> <span class="bu">file</span> <span class="kw">in</span> rasters:</span>

@@ -23,14 +23,14 @@
     <item>
       <title>Effects of managed honeybee colonies on bumblebee occurrence in the US</title>
       <dc:creator>Peter Menzies</dc:creator>
-      <link>https://petermenzies.github.io/posts/2021-12-02-apisvsbombus</link>
+      <link>https://petermenzies.github.io/posts/2021-12-02-apis-vs-bombus</link>
       <description>My statistical analysis of honeybee colonies and bumblebee occurrence in the US, using spatial interpolation and simple linear regression.</description>
       <category>Data Science</category>
       <category>R</category>
       <category>Spatial Analysis</category>
-      <guid>https://petermenzies.github.io/posts/2021-12-02-apisvsbombus</guid>
+      <guid>https://petermenzies.github.io/posts/2021-12-02-apis-vs-bombus</guid>
       <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://petermenzies.github.io/posts/2021-12-02-apisvsbombus/apis_vs_bombus_files/figure-html5/unnamed-chunk-4-1.png" medium="image" type="image/png" width="1248" height="768"/>
+      <media:content url="https://petermenzies.github.io/posts/2021-12-02-apis-vs-bombus/apis_vs_bombus_files/figure-html5/unnamed-chunk-4-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
     <item>
       <title>Assessing Iowa's potential for wind energy generation</title>
@@ -47,22 +47,12 @@
     <item>
       <title>SecRet Santa</title>
       <dc:creator>Peter Menzies</dc:creator>
-      <link>https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange</link>
+      <link>https://petermenzies.github.io/posts/2021-08-23-secret-santa</link>
       <description>An R function I built to automate my family's secret santa matching process</description>
       <category>R</category>
-      <guid>https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange</guid>
+      <guid>https://petermenzies.github.io/posts/2021-08-23-secret-santa</guid>
       <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
-      <media:content url="https://petermenzies.github.io/posts/2021-08-23-christmas-gift-exchange/chRistmas_wide.png" medium="image" type="image/png" width="1200" height="800"/>
-    </item>
-    <item>
-      <title>User input as function arguments in R</title>
-      <dc:creator>Peter Menzies</dc:creator>
-      <link>https://petermenzies.github.io/posts/2021-08-10-user-input-within-functions</link>
-      <description>A brief rundown of using readline() to prompt a user's input for use as function arguments</description>
-      <category>R</category>
-      <category>Function I Learned</category>
-      <guid>https://petermenzies.github.io/posts/2021-08-10-user-input-within-functions</guid>
-      <pubDate>Sun, 22 Aug 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://petermenzies.github.io/posts/2021-08-23-secret-santa/chRistmas_wide.png" medium="image" type="image/png" width="1200" height="800"/>
     </item>
   </channel>
 </rss>
