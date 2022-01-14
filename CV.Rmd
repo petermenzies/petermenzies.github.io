@@ -18,7 +18,6 @@ knitr::opts_chunk$set(echo = TRUE)
   - *Data Visualization and Communication*
   - *Remote Sensing and Environmental Data*
   - *Spatial Analysis for Environmental Data Science*
-  - *Modeling Environmental Systems*
 
 
 ### **Bachelor of Science in Environmental Studies**, 3.7 GPA (June 2016)
