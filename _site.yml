@@ -10,8 +10,8 @@ navbar:
       href: index.html
     - text: "Bio"
       href: bio.html
-    - text: "CV"
-      href: CV.html
+    - text: "Resume"
+      href: PMenzies_resume_1_18_22.pdf
     - text: "Blog"
       href: blog.html
     - text: "Publications"
