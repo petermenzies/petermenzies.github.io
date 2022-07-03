@@ -11,7 +11,7 @@ navbar:
     - text: "Bio"
       href: bio.html
     - text: "Resume"
-      href: PMenzies_resume_1_18_22.pdf
+      href: "Menzies_resume_7-2-22.pdf"
     - text: "Blog"
       href: blog.html
     - text: "Publications"

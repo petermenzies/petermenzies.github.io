@@ -1,6 +1,6 @@
 ---
 title: "Peter Menzies"
-image: "Peter_headshot.jpeg"
+image: "Peter_NCEAS_headshot.jpeg"
 links:
   - label: '<i class="far fa-envelope fa-3x"></i>'
     url: "mailto:peterfmenzies@gmail.com"
@@ -13,5 +13,5 @@ output:
 site: distill::distill_website
 ---
 
-#### Aspiring data scientist,
+#### Data scientist,
 #### environmentalist, climber
