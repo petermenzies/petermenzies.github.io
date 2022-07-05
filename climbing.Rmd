@@ -1,6 +1,6 @@
 ---
 title: "Climbing"
-description: "A little insight into my favorite pastime—pulling on rocks"
+description: "A little insight into my favorite pastime"
 ---
 
 ```{r setup, include=FALSE}
