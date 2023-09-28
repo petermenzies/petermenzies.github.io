@@ -50,16 +50,17 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  { color: #00769e; background-color: #f1f3f5; }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
+code span { color: #00769e; } /* Normal */
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
-code span.at { color: #20794d; } /* Attribute */
+code span.at { color: #657422; } /* Attribute */
 code span.bn { color: #ad0000; } /* BaseN */
 code span.bu { } /* BuiltIn */
-code span.cf { color: #007ba5; } /* ControlFlow */
+code span.cf { color: #00769e; } /* ControlFlow */
 code span.ch { color: #20794d; } /* Char */
 code span.cn { color: #8f5902; } /* Constant */
 code span.co { color: #5e5e5e; } /* Comment */
@@ -73,17 +74,18 @@ code span.fl { color: #ad0000; } /* Float */
 code span.fu { color: #4758ab; } /* Function */
 code span.im { } /* Import */
 code span.in { color: #5e5e5e; } /* Information */
-code span.kw { color: #007ba5; } /* Keyword */
+code span.kw { color: #00769e; } /* Keyword */
 code span.op { color: #5e5e5e; } /* Operator */
-code span.ot { color: #007ba5; } /* Other */
+code span.ot { color: #00769e; } /* Other */
 code span.pp { color: #ad0000; } /* Preprocessor */
-code span.sc { color: #20794d; } /* SpecialChar */
+code span.sc { color: #5e5e5e; } /* SpecialChar */
 code span.ss { color: #20794d; } /* SpecialString */
 code span.st { color: #20794d; } /* String */
 code span.va { color: #111111; } /* Variable */
 code span.vs { color: #20794d; } /* VerbatimString */
 code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
+
 
   <!--radix_placeholder_meta_tags-->
   <title>Peter Menzies: CV</title>
@@ -455,9 +457,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   </style>
 
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="site_libs/font-awesome-6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.4.0/css/v4-shims.min.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
   <script src="site_libs/autocomplete-0.37.1/autocomplete.min.js"></script>
   <script src="site_libs/fuse-6.4.1/fuse.min.js"></script>
@@ -786,6 +788,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -1027,10 +1030,6 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
-  }
-
-  .figure img {
-    width: 100%;
   }
 
   .figure .caption {
@@ -1862,7 +1861,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
+          $(this).html(fn.shadowRoot.querySelector("sup"))
+          $(this).id = fn.id
+          fn.remove()
+        }
+        var refs = $(this).attr('data-cites').split(" ");
+        var refHtml = refs.map(function(ref) {
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
+        }).join("\n");
         window.tippy(this, {
           allowHTML: true,
           content: refHtml,
@@ -1873,6 +1887,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
+
+      // fix footnotes in tables (#411)
+      // replacing broken distill.pub feature
+      $('table d-footnote').each(function() {
+        // we replace internal showAtNode methode which is triggered when hovering a footnote
+        this.hoverBox.showAtNode = function(node) {
+          // ported from https://github.com/distillpub/template/pull/105/files
+          calcOffset = function(elem) {
+              let x = elem.offsetLeft;
+              let y = elem.offsetTop;
+              // Traverse upwards until an `absolute` element is found or `elem`
+              // becomes null.
+              while (elem = elem.offsetParent && elem.style.position != 'absolute') {
+                  x += elem.offsetLeft;
+                  y += elem.offsetTop;
+              }
+
+              return { left: x, top: y };
+          }
+          // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop
+          const bbox = node.getBoundingClientRect();
+          const offset = calcOffset(node);
+          this.show([offset.left + bbox.width, offset.top + bbox.height]);
+        }
+      })
 
       // clear polling timer
       clearInterval(tid);
@@ -1972,6 +2011,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
+      // ignore leaflet img layers (#106)
+      figures = figures.filter(':not(img[class*="leaflet"])')
       if ($(this).attr('data-layout') !== "l-body") {
         figures.css('width', '100%');
       } else {
@@ -1994,7 +2035,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
-        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+        $(this).attr('href', $(this).attr('href').replace(/^index[.]html/, "./"));
       });
     }
 
@@ -2386,7 +2427,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: var(--hover-color, white);
   }</style>
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.24/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2445,13 +2486,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <h2 id="education">Education</h2>
-<h3
-id="master-of-environmental-data-science-4.0-gpa-expected-june-2022"><strong>Master
-of Environmental Data Science</strong>, 4.0 GPA (Expected June
-2022)</h3>
+<h3 id="master-of-environmental-data-science-4.0-gpa-expected-june-2022"><strong>Master of Environmental Data Science</strong>, 4.0 GPA (Expected June 2022)</h3>
 <ul>
-<li><p><strong>Bren School of Environmental Science &amp; Management –
-University of California, Santa Barbara (UCSB)</strong></p></li>
+<li><p><strong>Bren School of Environmental Science &amp; Management – University of California, Santa Barbara (UCSB)</strong></p></li>
 <li><p><strong>Highlighted Coursework</strong>:</p>
 <ul>
 <li><em>Machine Learning in Environmental Science</em></li>
@@ -2460,12 +2497,9 @@ University of California, Santa Barbara (UCSB)</strong></p></li>
 <li><em>Spatial Analysis for Environmental Data Science</em></li>
 </ul></li>
 </ul>
-<h3
-id="bachelor-of-science-in-environmental-studies-3.7-gpa-june-2016"><strong>Bachelor
-of Science in Environmental Studies</strong>, 3.7 GPA (June 2016)</h3>
+<h3 id="bachelor-of-science-in-environmental-studies-3.7-gpa-june-2016"><strong>Bachelor of Science in Environmental Studies</strong>, 3.7 GPA (June 2016)</h3>
 <ul>
-<li><p><strong>University of North Carolina at Asheville
-(UNCA)</strong></p></li>
+<li><p><strong>University of North Carolina at Asheville (UNCA)</strong></p></li>
 <li><p><strong>Honors/Awards:</strong></p>
 <ul>
 <li>Cum Laude</li>
@@ -2481,82 +2515,50 @@ of Science in Environmental Studies</strong>, 3.7 GPA (June 2016)</h3>
 </ul>
 <p><br></p>
 <h2 id="environmental-experience">Environmental Experience</h2>
-<p><strong>Environmental Educator</strong> at <strong>Asheville
-GreenWorks</strong> | Asheville, NC (1/19 – 7/21)</p>
+<p><strong>Environmental Educator</strong> at <strong>Asheville GreenWorks</strong> | Asheville, NC (1/19 – 7/21)</p>
 <ul>
-<li>Lead environmental education programs for K-12 classes and community
-groups of all ages</li>
-<li>Created educational video content and built/curated pages on the
-organization’s website</li>
-<li>Oversaw efforts to maintain Asheville’s status as a Bee City and
-co-chaired the associated Leadership Committee consisting of 20
-members</li>
-<li>Organized and facilitated over 30 events focused on pollinator
-education and outreach</li>
+<li>Lead environmental education programs for K-12 classes and community groups of all ages</li>
+<li>Created educational video content and built/curated pages on the organization’s website</li>
+<li>Oversaw efforts to maintain Asheville’s status as a Bee City and co-chaired the associated Leadership Committee consisting of 20 members</li>
+<li>Organized and facilitated over 30 events focused on pollinator education and outreach</li>
 </ul>
-<p><strong>Research Technician</strong> at <strong>NC State University
-(NCSU)</strong> | Asheville, NC (6/18 – 10/18)</p>
+<p><strong>Research Technician</strong> at <strong>NC State University (NCSU)</strong> | Asheville, NC (6/18 – 10/18)</p>
 <ul>
-<li>Identified and mapped over 3000 trees to observe regeneration trends
-in forest gaps</li>
+<li>Identified and mapped over 3000 trees to observe regeneration trends in forest gaps</li>
 <li>Processed resulting spatial data in QGIS</li>
-<li>Navigated through 40 backcountry study sites and recorded locations
-of trees using Esri ArcPad</li>
+<li>Navigated through 40 backcountry study sites and recorded locations of trees using Esri ArcPad</li>
 <li>Assisted with 3D mapping of study sites using LiDAR</li>
 </ul>
-<p><strong>Research Technician</strong> at <strong>US Forest Service
-(USFS)</strong> | Asheville, NC (10/15 – 8/16)</p>
+<p><strong>Research Technician</strong> at <strong>US Forest Service (USFS)</strong> | Asheville, NC (10/15 – 8/16)</p>
 <ul>
-<li>Collected data in wilderness settings for three different eastern
-hemlock studies</li>
-<li>Input, cleaned, analyzed, and visualized data using Excel and
-SAS</li>
-<li>Processed foliage, bark, and soil samples to assess chemical trends
-in woolly adelgid resistance</li>
+<li>Collected data in wilderness settings for three different eastern hemlock studies</li>
+<li>Input, cleaned, analyzed, and visualized data using Excel and SAS</li>
+<li>Processed foliage, bark, and soil samples to assess chemical trends in woolly adelgid resistance</li>
 </ul>
 <p><br></p>
 <h2 id="skills">Skills</h2>
 <p><strong>Data science:</strong></p>
 <ul>
-<li>Programming languages: <code>R</code>, <code>Python</code>,
-<code>SQL</code>, <code>Bash</code>, <code>HTML</code></li>
-<li>Data management: experienced with importing, cleaning, and wrangling
-large datasets in <code>R</code> and <code>Python</code></li>
-<li>Data visualization: experience creating static and interactive
-visualizations of quantitative, categorical, and spatial datasets using
-<code>matplotlib</code>, <code>ggplot2</code>, <code>tmap</code>,
-<code>Shiny</code>, and <code>plotly</code>.</li>
-<li>Spatial analysis: experience with spatial work in <code>R</code> and
-<code>Python</code> using <code>SF</code>, <code>SP</code>,
-<code>GeoPandas</code>, and <code>Google Earth Engine</code>—as well as
-within a graphical interface like QGIS. Additional experience using
-PostGIS databases.</li>
-<li>Statistics: experience conducting and visualizing traditional
-statistical analyses in <code>R</code> using <code>stats</code> and
-<code>gstat</code>.</li>
+<li>Programming languages: <code>R</code>, <code>Python</code>, <code>SQL</code>, <code>Bash</code>, <code>HTML</code></li>
+<li>Data management: experienced with importing, cleaning, and wrangling large datasets in <code>R</code> and <code>Python</code></li>
+<li>Data visualization: experience creating static and interactive visualizations of quantitative, categorical, and spatial datasets using <code>matplotlib</code>, <code>ggplot2</code>, <code>tmap</code>, <code>Shiny</code>, and <code>plotly</code>.</li>
+<li>Spatial analysis: experience with spatial work in <code>R</code> and <code>Python</code> using <code>SF</code>, <code>SP</code>, <code>GeoPandas</code>, and <code>Google Earth Engine</code>—as well as within a graphical interface like QGIS. Additional experience using PostGIS databases.</li>
+<li>Statistics: experience conducting and visualizing traditional statistical analyses in <code>R</code> using <code>stats</code> and <code>gstat</code>.</li>
 <li>Workflow: experienced with Git, GitHub, ZenHub, and Asana</li>
 </ul>
-<p><strong>Writing:</strong> Co-authored two journal articles published
-in <a
-href="https://bioone.org/journals/southeastern-naturalist/volume-16/issue-3/058.016.0317/Potential-Herbivory-on-the-Wintergreen-Orchids-Aplectrum-hyemale-and-Tipularia/10.1656/058.016.0317.short"><em>Southeastern
-Naturalist</em></a> and <a
-href="https://bioone.org/journals/the-journal-of-the-torrey-botanical-society/volume-144/issue-4/TORREY-D-16-00039.1/The-habitat-and-abundance-of-two-wintergreen-orchids-Aplectrum-hyemale/10.3159/TORREY-D-16-00039.1.short"><em>Journal
-of the Torrey Botanical Society</em></a></p>
+<p><strong>Writing:</strong> Co-authored two journal articles published in <a href="https://bioone.org/journals/southeastern-naturalist/volume-16/issue-3/058.016.0317/Potential-Herbivory-on-the-Wintergreen-Orchids-Aplectrum-hyemale-and-Tipularia/10.1656/058.016.0317.short"><em>Southeastern Naturalist</em></a> and <a href="https://bioone.org/journals/the-journal-of-the-torrey-botanical-society/volume-144/issue-4/TORREY-D-16-00039.1/The-habitat-and-abundance-of-two-wintergreen-orchids-Aplectrum-hyemale/10.3159/TORREY-D-16-00039.1.short"><em>Journal of the Torrey Botanical Society</em></a></p>
 <p><strong>Certifications:</strong> Wilderness First Responder</p>
 <p><br></p>
 <h2 id="additional-work-experience">Additional Work Experience</h2>
-<p><strong>Kitchen Manager and Shift Leader</strong> – Lexington Corner
-Market</p>
+<p><strong>Kitchen Manager and Shift Leader</strong> – Lexington Corner Market</p>
 <ul>
 <li>Asheville, NC (3/18 – 12/18)</li>
 </ul>
-<p><strong>Zipline and Canyoneering Guide</strong> – French Broad
-Adventures</p>
+<p><strong>Zipline and Canyoneering Guide</strong> – French Broad Adventures</p>
 <ul>
 <li>Marshall, NC (6/14 – 10/17)</li>
 </ul>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

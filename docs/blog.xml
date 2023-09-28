@@ -7,7 +7,7 @@
     <description>My Website
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 20 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>2021-12-20</lastBuildDate>
     <item>
       <title>Creating an animated visualization of sea ice concentration with imageio</title>
       <dc:creator>Peter Menzies</dc:creator>
@@ -17,7 +17,7 @@
       <category>Python</category>
       <category>Spatial Analysis</category>
       <guid>https://petermenzies.github.io/posts/2021-12-20-sea-ice-animation</guid>
-      <pubDate>Mon, 20 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>2021-12-20</pubDate>
       <media:content url="https://petermenzies.github.io/posts/2021-12-20-sea-ice-animation/ice_81_20.gif" medium="image" type="image/gif"/>
     </item>
     <item>
@@ -29,7 +29,7 @@
       <category>R</category>
       <category>Spatial Analysis</category>
       <guid>https://petermenzies.github.io/posts/2021-12-02-apis-vs-bombus</guid>
-      <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>2021-12-02</pubDate>
       <media:content url="https://petermenzies.github.io/posts/2021-12-02-apis-vs-bombus/apis_vs_bombus_files/figure-html5/unnamed-chunk-4-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
     <item>
@@ -41,7 +41,7 @@
       <category>Python</category>
       <category>Spatial Analysis</category>
       <guid>https://petermenzies.github.io/posts/2021-12-20-iowa-wind-energy</guid>
-      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>2021-12-01</pubDate>
       <media:content url="https://petermenzies.github.io/posts/2021-12-20-iowa-wind-energy/files/output_38_0.png" medium="image" type="image/png" width="607" height="413"/>
     </item>
     <item>
@@ -51,7 +51,7 @@
       <description>An R function I built to automate my family's secret santa matching process</description>
       <category>R</category>
       <guid>https://petermenzies.github.io/posts/2021-08-23-secret-santa</guid>
-      <pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate>
+      <pubDate>2021-08-23</pubDate>
       <media:content url="https://petermenzies.github.io/posts/2021-08-23-secret-santa/chRistmas_wide.png" medium="image" type="image/png" width="1200" height="800"/>
     </item>
   </channel>
